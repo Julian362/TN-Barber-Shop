@@ -7,32 +7,32 @@
 #listasI{
     color:#E7BC4D;
     font-size: 25px;
-    margin: 0 5%;    
+    text-align: left;
+    width: 100%;
 }
+
 #listasD{
     color:#E7BC4D;
     font-size: 25px;
-    margin: 0 5%;
-    margin-left: 15%;
+    text-align: right;
+    width: 100%;
 }
-#listasD2{
-    color:#E7BC4D;
-    font-size: 25px;
-    margin: 0 5%;
-    margin-left: 10%;
-}
+
 .contenedorIzquierda {
+    padding-right: 40px;
     margin-left: 5%;
-    width: 40%; 
+    margin-right: 5%;
+    width:40%; 
 }
 .contenedorDerecha{
+    padding-left: 40px;
     margin-left: 5%;
-    width: 50%;
+    margin-right: 5%;
+    width: 40%;
 }
 #logo2{
     position: absolute;
-    left: 40%;
-    right: 40%;
+    left: 45.3%;
     top: 0px;
     height: 182px;
     width: 127px;
@@ -52,7 +52,7 @@
 }
 .titulo{
     display: none;
-    color:"#E7BC4D"
+    color:"#E7BC4D";
 }
 
 @media (max-width: 992px) {
