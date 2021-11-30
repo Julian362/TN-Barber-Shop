@@ -1,8 +1,10 @@
 import '../css/Login.css'
+import Footer from '../components/Footer';
 import {Link} from 'react-router-dom'
 
 function Login() {
     return (
+        <div>
         <div className="Form-Inicio mt-5">
             <img className="mt-4"src="/img/Res1.svg" alt="" id="logo-responsive"/>
             <p id="Iniciar">INICIAR SESIÓN</p>
@@ -26,7 +28,11 @@ function Login() {
                     </div>
                 </div>
             </div>
+            
         </div>
+        <Footer/>
+        </div>
+        
     );
 }
 export default Login;

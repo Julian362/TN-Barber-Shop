@@ -5,6 +5,7 @@ const agenda = () => {
         <div>
             <h1>Página de agenda</h1>
         </div>
+        
     )
 }
 

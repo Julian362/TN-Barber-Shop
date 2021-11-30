@@ -32,7 +32,7 @@ function App() {
 
 
     </div> 
-    <button type="button" className="btn btn-primary">Hola</button>
+
     </>
   );
 }
