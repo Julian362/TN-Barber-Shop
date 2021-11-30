@@ -1,11 +1,13 @@
 import React from 'react'
+import Login from '../Login'
 
 const Inicio = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <img src="/img/portada1.png" alt=""/>
+            <Login/>
+        </>
     )
 }
 
-export default Inicio
+export default Inicio;

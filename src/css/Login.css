@@ -1,0 +1,32 @@
+.Form-Inicio{
+    width: 40%;
+    height: 592px;
+    margin: auto;
+    background: #FFFFFF;
+    border: 1px solid #C6BDBD;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(199, 199, 199, 0.67);
+    border-radius: 20px;
+    position: relative;
+}
+.Form-Inicio p{
+    position: relative;
+    top: 25%;
+    font-size: 36px;
+    margin: auto;
+    text-align: center;
+}
+
+#logo-responsive{
+    width: 50%;
+    height: fit-content;
+    position: absolute;
+    margin-left: 25%;
+}
+
+@media (max-width: 712px) {
+    .Form-Inicio p {
+      top:15%;
+      font-size: 25px;
+    }
+}

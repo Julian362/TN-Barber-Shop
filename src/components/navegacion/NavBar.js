@@ -16,7 +16,7 @@ function NavBar() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" id="logo" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span id="logo" ></span>
                 <Link to='/'>
-                <img src="/img/logo.png" id="imagenButton" alt=""></img>
+                    <img src="/img/logo.png" id="imagenButton" alt=""/>
                 </Link>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -24,7 +24,9 @@ function NavBar() {
                     <Link className="col nav-link" id="listasI" to='/Servicios'>Servicios</Link>
                     <Link className="col nav-link" id="listasI" to='/Contactos'>Contactos</Link>            
                 </div>  
-                <img  src="img/logo.png" id="logo2" alt=""/>
+                <Link to="/">
+                    <img  src="img/logo.png" id="logo2" alt=""/>
+                </Link>
                 <div className="navbar-nav contenedorDerecha">
                     <Link className="col nav-link " id="listasD" to='/Agenda-tu-cita'>Agenda tu cita</Link>
                     <Link className="col nav-link" id="listasD" to='/Usuario'>Usuario</Link>            
