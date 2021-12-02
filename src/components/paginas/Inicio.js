@@ -1,12 +1,16 @@
 import React from 'react'
-import Login from '../Login'
+import { Fragment } from 'react';
 
-const Inicio = () => {
+
+const Inicio = (props) => {
+    const inicio={
+        //filter: "drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.81))"
+    }
+   
     return (
-        <>
-            <img src="/img/portada1.png" alt=""/>
-            <Login/>
-        </>
+        <Fragment>
+            <img src="/img/portada1.png" alt="" style={inicio}/>
+        </Fragment>
     )
 }
 
