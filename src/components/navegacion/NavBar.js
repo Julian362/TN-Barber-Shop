@@ -28,8 +28,19 @@ function NavBar() {
                     <img  src="img/logo.png" id="logo2" alt=""/>
                 </Link>
                 <div className="navbar-nav contenedorDerecha">
-                    <Link className="col nav-link " id="listasD" to='/Agenda-tu-cita'>Agenda tu cita</Link>
-                    <Link className="col nav-link" id="listasD" to='/Usuario'>Usuario</Link>            
+                    <Link className="col nav-link" id="listasD" to='/Agenda-tu-cita'>Agenda tu cita</Link>
+
+                    <div className="col nav-link" id="listasD">
+                        <div class="btn-group">
+                            <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{fontSize: "20px"}}>
+                                Usuario
+                            </button>
+                            <ul className="dropdown-menu">
+                                <Link className="dropdown-item" to='/Usuario'>Editar Usuario</Link>
+                                <Link className="dropdown-item" to='/HistorialCitas'>Historial Citas</Link>                              
+                            </ul>
+                        </div>
+                    </div>           
                 </div>                
             </div>
             </div>
