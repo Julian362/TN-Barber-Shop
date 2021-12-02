@@ -59,27 +59,7 @@
     top: 55%;
     text-align: center;
 }
-.redes {
-    position: relative;
-    width: 59%;
-    top: 57%;
-    margin-left: 22%;
-}
-.redes img{
-    width: auto;
-    height:50px;
-}
-#logoface{
-    float: right;
-}
-#logoinsta{
-    padding-left: 20%;
-}
-#logowhat{
-    height: 45px;
-    margin-left: 2%;
-    border-radius: 9px;
-}
+
 
 @media (max-width:1366px){
     #Nombre{    

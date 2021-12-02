@@ -1,8 +1,14 @@
 import '../css/Login.css'
+import Redes from '../components/Redes'
 import Footer from '../components/Footer';
 import {Link} from 'react-router-dom'
 
 function Login() {
+
+    const Posicion ={
+        marginTop:"345px"
+    }
+
     return (
         <div>
         <div className="Form-Inicio mt-5">
@@ -15,20 +21,9 @@ function Login() {
             <Link to=""><p id="Olvidar">¿Olvidaste tu contraseña?</p></Link>
             <button class="btn btn-primary btnIngresar">Ingresar</button>
             <Link to=""><p id="Registrate">Registrarse</p></Link>
-            <div className="redes">
-                <div className="row">
-                    <div className="col">
-                        <img id="logoface" src="/img/LogoFace.png" alt=""/>
-                    </div>
-                    <div className="col">
-                        <img id="logoinsta" src="/img/LogoInsta.png" alt=""/>
-                    </div>
-                    <div className="col">
-                        <img id="logowhat" src="/img/LogoWhat.png" alt=""/>
-                    </div>
-                </div>
-            </div>
-            
+            <div style={Posicion}>
+                <Redes/> 
+            </div>                       
         </div>
         <Footer/>
         </div>
