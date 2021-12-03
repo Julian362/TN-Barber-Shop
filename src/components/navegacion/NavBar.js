@@ -39,7 +39,7 @@ function NavBar() {
                                 <Link className="dropdown-item" to='/Login'>Iniciar usuario</Link>
                                 <Link className="dropdown-item" to='/Registro'>Registro</Link>
                                 <Link className="dropdown-item" to='/Usuario'>Editar usuario</Link>
-                                <Link className="dropdown-item" to='/HistorialCitas'>Historial citas</Link>
+                                <Link className="dropdown-item" to='/Historial-citas'>Historial citas</Link>
                                 <Link className="dropdown-item" to='/Usuario'>Cerrar sesión</Link>                              
                             </ul>
                         </div>
