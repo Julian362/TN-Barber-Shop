@@ -15,6 +15,15 @@ const HistorialCitas = (props) => {
             </tr>
         </>
     );
+
+    const servicios = props.Servicios;
+
+    const lista_servicios = servicios.map((p) =>
+        <>
+            <option value="{p.nombre}">{p.nombre}</option>
+        </>
+    );
+
     const total = lista_usuarios_atendidos.map((p) => p.cantidad).reduce((prev, curr) => prev + curr, 0);
 
     return (
@@ -31,7 +40,7 @@ const HistorialCitas = (props) => {
                                 <div className="col">
                                     <div className="row">
                                         <div className="col">
-                                            <h5 for="desde-date">Desde:</h5>
+                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="desde-date">Desde:</h5>
                                         </div>
                                         <div className="col">
                                             <input type="date" className="form-control" id="desde-date" value="2018-07-22"/>
@@ -41,7 +50,7 @@ const HistorialCitas = (props) => {
                                 <div className="col">
                                     <div className="row">
                                         <div className="col">
-                                            <h5 for="hasta-date">Hasta:</h5>
+                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="hasta-date">Hasta:</h5>
                                         </div>
                                         <div className="col">
                                             <input type="date" className="form-control" id="hasta-date" value="2018-07-22"/>
@@ -75,8 +84,8 @@ const HistorialCitas = (props) => {
                             <div className="row ingresos-date">
                                 <div className="col">
                                     <div className="row">
-                                        <div className="col">
-                                            <h5 for="desde-date">Desde:</h5>
+                                        <div className="col-4">
+                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="desde-date">Desde:</h5>
                                         </div>
                                         <div className="col">
                                             <input type="date" className="form-control" id="desde-date" value="2018-07-22"/>
@@ -85,26 +94,24 @@ const HistorialCitas = (props) => {
                                 </div>
                                 <div className="col">
                                     <div className="row">
-                                        <div className="col">
-                                            <h5 for="hasta-date">Hasta:</h5>
+                                        <div className="col-4">
+                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="hasta-date">Hasta:</h5>
                                         </div>
                                         <div className="col">
                                             <input type="date" className="form-control" id="hasta-date" value="2018-07-22"/>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col">
+                                <div className="col-5">
                                     <div className="row">
-                                        <div className="col">
-                                            <h5 for="reportes-servicios">Servicios</h5>
+                                        <div className="col-6">
+                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="reportes-servicios">Servicios :</h5>
                                         </div>
-                                        <div className="col">
-                                        <select class="form-select" id="inputGroupSelect01">
-                                            <option selected>Choose...</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
+                                        <div className="col-6">
+                                            <select class="form-select form-control" id="reportes-servicios">
+                                                <option selected>Seleccionar servicio</option>
+                                                {lista_servicios}
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -112,8 +119,9 @@ const HistorialCitas = (props) => {
                             <table className="table-responsive-sm table-hover table-bordered text-center usuarios-atendidos-tabla">
                                 <thead>
                                     <tr style={{ backgroundColor: "#B7B7B7" }}>
-                                        <th style={{ width: "50%", height:"3rem" }} >Fecha</th>
-                                        <th style={{ width: "50%", height:"3rem" }} >Cantidad de usuariosa atendidos</th>
+                                        <th style={{ width: "33%", height:"3rem" }} >Fecha</th>
+                                        <th style={{ width: "33%", height:"3rem" }} >Servicio</th>
+                                        <th style={{ width: "33%", height:"3rem" }} >Ingresos</th>
                                     </tr>
                                 </thead>
                                 <tbody style={{ backgroundColor: "#E4E4E4" }}>
@@ -121,8 +129,8 @@ const HistorialCitas = (props) => {
                                 </tbody>
                                 <tfoot>
                                     <tr style={{ backgroundColor: "#B7B7B7" }}>
-                                        <th style={{ width: "50%", height:"3rem" }}>Total</th>
-                                        <th style={{ width: "50%", height:"3rem" }}>{total}</th>
+                                        <th style={{ width: "33%", height:"3rem" }}>Total</th>
+                                        <th style={{ width: "33%", height:"3rem" }}>{total}</th>
                                     </tr>
                                 </tfoot>
                             </table>

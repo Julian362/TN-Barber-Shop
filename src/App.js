@@ -17,10 +17,12 @@ import Reportes from './components/paginas/Reportes';
 
 
 function App() {
+
 	const [lista_usuarios_atendidos] = useState([
 		{ id: "1", fecha: "23/11/2021", cantidad: 12 },
 		{ id: "1", fecha: "23/11/2021", cantidad: 20 }
 	]);
+
 
 
 	const Lista_Servicios = [
@@ -30,6 +32,12 @@ function App() {
 		{ id: "4", nombre: "Diseño de corte y barba", duracion: "1 hora", precio: "$ 25.000", rutaimg: "/img/DiseñoCB.png" },
 		{ id: "5", nombre: "Limpieza facial", duracion: "1 hora", precio: "$ 20.000", rutaimg: "/img/LimpiezaF.png" },
 	];
+
+	const [lista_ingresos] = useState([
+		{ id: "1", fecha: "23/11/2021"}
+	]);
+
+	console.log(lista_ingresos)
 
 	const Lista_Trabajadores = [
 		{ id: "1", Nickname: "Racastano", rutafoto: "/img/ImgTrabajador.png" },
@@ -44,8 +52,8 @@ function App() {
 	return (
 		<>
 			<div className="containerimg">
-				<NavBar />
 				<Router>
+				<NavBar />
 					<Switch>
 						<Route path='/' exact component={Inicio} />
 						<Route path='/Servicios' component={Servicios} />
@@ -56,16 +64,11 @@ function App() {
 						<Route path='/Usuario' component={Usuario} />
 						<Route path='/HistorialCitas' component={HistorialCitas} />
 						<Route exact path='/Reportes' >
-						<Reportes atendidos= {lista_usuarios_atendidos} />
+						<Reportes atendidos= {lista_usuarios_atendidos} Servicios={Lista_Servicios} />
 						</Route>
-
 					</Switch >
-
 				</Router >
-
-
 			</div >
-
 		</>
 	);
 }
