@@ -9,7 +9,7 @@ function NavBar() {
         fontSize:"35px"
     }
     return (
-        <Fragment>        
+        <Fragment>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <Link className="navbar-brand titulo" id="titulo" to='/' style={style}>NT Barbershop</Link>
@@ -22,8 +22,8 @@ function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav contenedorIzquierda">
                     <Link className="col nav-link" id="listasI" to='/Servicios'>Servicios</Link>
-                    <Link className="col nav-link" id="listasI" to='/Contactos'>Contactos</Link>            
-                </div>  
+                    <Link className="col nav-link" id="listasI" to='/Contactos'>Contactos</Link>
+                </div>
                 <Link to="/">
                     <img  src="img/logo.png" id="logo2" alt=""/>
                 </Link>
@@ -37,16 +37,16 @@ function NavBar() {
                             </button>
                             <ul className="dropdown-menu">
                                 <Link className="dropdown-item" to='/Usuario'>Editar usuario</Link>
-                                <Link className="dropdown-item" to='/HistorialCitas'>Historial citas</Link>                              
+                                <Link className="dropdown-item" to='/HistorialCitas'>Historial citas</Link>
+                                <Link className="dropdown-item" to='/Reportes'>Supervisor Reportes</Link>
                             </ul>
                         </div>
-                    </div>           
-                </div>                
+                    </div>
+                </div>
             </div>
             </div>
         </nav>
-      
-      </Fragment>
+        </Fragment>
     );
 }
 export default NavBar;

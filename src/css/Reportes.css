@@ -1,0 +1,46 @@
+.supervisor-contenedor{
+    width: 80% ;
+    margin: auto;
+    margin-top: 15%;
+    background: #FFFFFF;
+    border: 1px solid #C6BDBD;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(199, 199, 199, 0.67);
+    border-radius: 20px;
+    text-align: center;
+}
+.reportes-containter{
+    width:95%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#logo-responsive-reportes{
+    width: 30%;
+    height: auto;
+    margin-bottom: 2%
+}
+
+.reportes-blanco-container{
+    background-color: #FFFFFF;
+}
+
+.usuarios-atendidos-tabla{
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom:2%;
+}
+
+.usuarios-atendidos-date{
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.ingresos-date{
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+}
