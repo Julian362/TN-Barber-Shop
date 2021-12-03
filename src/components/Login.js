@@ -1,6 +1,5 @@
 import '../css/Login.css'
 import Redes from '../components/Redes'
-import Footer from '../components/Footer';
 import {Link} from 'react-router-dom'
 
 function Login() {
@@ -10,7 +9,6 @@ function Login() {
     }
 
     return (
-        <div>
         <div className="Form-Inicio mt-5">
             <img className="mt-4"src="/img/Res1.svg" alt="" id="logo-responsive"/>
             <p id="Iniciar">INICIAR SESIÓN</p>
@@ -24,10 +22,7 @@ function Login() {
             <div style={Posicion}>
                 <Redes/> 
             </div>                       
-        </div>
-        <Footer/>
-        </div>
-        
+        </div>        
     );
 }
 export default Login;
