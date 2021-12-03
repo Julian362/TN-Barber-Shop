@@ -10,6 +10,8 @@ import Contactos from './components/paginas/Contactos';
 import Usuario from './components/paginas/Usuario';
 import Inicio from './components/paginas/Inicio';
 import HistorialCitas from './components/paginas/HistorialCitas';
+import Login from './components/Login';
+import Registro from './components/Registro';
 
 function App() {
   return (
@@ -26,7 +28,10 @@ function App() {
           <Route path='/Agenda-tu-cita' component ={Agenda} />
           <Route path='/Contactos' component ={Contactos} />
           <Route path='/Usuario' component ={Usuario} />
-          <Route path='/HistorialCitas' component ={HistorialCitas} />
+          <Route path='/Historial-citas' component ={HistorialCitas} />
+          <Route path='/Login' component ={Login} />
+          <Route path='/Registro' component ={Registro} />
+
 
         </Switch>
 
