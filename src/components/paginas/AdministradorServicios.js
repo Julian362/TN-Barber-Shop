@@ -41,12 +41,12 @@ const HistorialCitas = (props) => {
                     <h1>ADMINISTRADOR</h1>
                     <h3>Servicios</h3>
                     <form className="form-servicios">
-                        <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nombre"/>
+                        <input type="text" className="form-control form-control-servicios-admin" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nombre"/>
                         <div class="input-group ">
-                            <input type="text" aria-label="First name" class="form-control mr-2 " placeholder="Valor"/>
-                            <input type="text" aria-label="Last name" class="form-control ml-2" placeholder="Duración"/>
+                            <input type="text" aria-label="First name" class="form-control form-control-servicios-admin mr-2 " placeholder="Valor"/>
+                            <input type="text" aria-label="Last name" class="form-control form-control-servicios-admin ml-2" placeholder="Duración"/>
                         </div>
-                        <textarea className="form-control" aria-label="With textarea" placeholder="Descripción"></textarea>
+                        <textarea className="form-control form-control-servicios-admin" aria-label="With textarea" placeholder="Descripción"></textarea>
                         <button type="button" className="btn btn-primary btn-lg mt-3">Guardar</button>
                     </form>
                     <div className="card bg-primary pb-4 servicios-containter"

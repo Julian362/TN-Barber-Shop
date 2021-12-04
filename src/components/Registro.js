@@ -22,19 +22,14 @@ function Registro() {
                     <input type="text" className="form-control input-Registro" id="Nombres-Registro" placeholder="Nombres" />
                     <input type="text" className="form-control input-Registro" id="Apellidos-Registro" placeholder="Apellidos" />
 
-                    <div className="row tipo-Documento-Registro">
-                        <div className="col-3">
-                            <select class="form-select" aria-label="Default select example">
+                    <div className="input-group input-Registro" style={{width:"85%"}}>
+                            <select class="form-select form-select-cc" style={{width:"25%"}}>
                                 <option selected>Tipo</option>
                                 <option value="1">C.C</option>
                                 <option value="2">T.I</option>
                                 <option value="3">C.E</option>
                             </select>
-                        </div>
-                        <div className="col-9">
-                            <input className="form-control input-Registro" id="Apellidos-Registro" placeholder="Documento"  />
-                        </div>
-                        
+                            <input className="form-control" id="Apellidos-Registro" placeholder="Documento" style={{width:"75%"}}/>
                     </div>
 
                     <input type="text" className="form-control input-Registro" id="Nickname-Registro" placeholder="Nickname" />
@@ -44,9 +39,9 @@ function Registro() {
 
                 </form>
 
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    <label className="form-check-label" for="flexCheckDefault">
+                <div className="custom-control custom-checkbox">
+                    <input className="custom-control-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label className="custom-control-label" for="flexCheckDefault">
                         Acepto política de tratamiento de datos
                     </label>
                 </div>
