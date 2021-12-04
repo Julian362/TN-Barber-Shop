@@ -13,6 +13,7 @@ import Inicio from './components/paginas/Inicio';
 import IniciarSesion from './components/paginas/IniciarSesion'
 import HistorialCitas from './components/paginas/HistorialCitas';
 import Reportes from './components/paginas/Reportes';
+import AdministradorServicios from './components/paginas/AdministradorServicios';
 
 
 
@@ -34,10 +35,16 @@ function App() {
 	];
 
 	const [lista_ingresos] = useState([
-		{ id: "1", fecha: "23/11/2021"}
+		{ id: "1", fecha: "23/11/2021",nombre: "Marcación de contornos",precio: 5},
+		{ id: "2", fecha: "23/11/2021",nombre: "Marcación de contornos",precio: 5},
+		{ id: "3", fecha: "23/11/2021",nombre: "Marcación de contornos",precio: 5}
 	]);
 
-	console.log(lista_ingresos)
+	const [lista_disponibles] = useState([
+		{ id: "1", fecha: "23/11/2021",inicio: "01:00 pm",fin: "2:00 pm"},
+		{ id: "2", fecha: "23/11/2021",inicio: "01:00 pm",fin: "2:00 pm"},
+		{ id: "3", fecha: "23/11/2021",inicio: "01:00 pm",fin: "2:00 pm"}
+	]);
 
 	const Lista_Trabajadores = [
 		{ id: "1", Nickname: "Racastano", rutafoto: "/img/ImgTrabajador.png" },
@@ -62,9 +69,19 @@ function App() {
 						</Route>
 						<Route path='/Contactos' component={Contactos} />
 						<Route path='/Usuario' component={Usuario} />
+						<Route path='/Login' component={IniciarSesion} />
 						<Route path='/HistorialCitas' component={HistorialCitas} />
+						<Route path='/AdministradorServicios' >
+						<AdministradorServicios 
+						Servicios={Lista_Servicios}/>
+						</Route>
 						<Route exact path='/Reportes' >
-						<Reportes atendidos= {lista_usuarios_atendidos} Servicios={Lista_Servicios} />
+						<Reportes
+						atendidos= {lista_usuarios_atendidos}
+						Servicios={Lista_Servicios}
+						ingresos={lista_ingresos}
+						disponibles={lista_disponibles}
+						/>
 						</Route>
 					</Switch >
 				</Router >

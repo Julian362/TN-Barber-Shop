@@ -39,6 +39,7 @@ function NavBar() {
                                 <Link className="dropdown-item" to='/Usuario'>Editar usuario</Link>
                                 <Link className="dropdown-item" to='/HistorialCitas'>Historial citas</Link>
                                 <Link className="dropdown-item" to='/Reportes'>Supervisor Reportes</Link>
+                                <Link className="dropdown-item" to='/AdministradorServicios'>Administrador Servicios</Link>
                             </ul>
                         </div>
                     </div>

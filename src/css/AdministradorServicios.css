@@ -9,44 +9,44 @@
     border-radius: 20px;
     text-align: center;
 }
-.reportes-containter{
+.servicios-containter{
     width:95%;
     margin: auto;
     margin-top: 2%;
     margin-bottom: 3%;
 }
 
-#logo-responsive-reportes{
+#logo-responsive-servicios{
     width: 30%;
     height: auto;
     margin-bottom: 2%
 }
 
-.reportes-blanco-container{
+.servicios-blanco-container{
     background-color: #FFFFFF;
 }
 
-.usuarios-atendidos-tabla{
-    width: 70%;
+.servicios-tabla{
+    width: 80%;
     margin: auto;
     margin-top: 2%;
     margin-bottom:2%;
 }
 
-.usuarios-atendidos-date{
-    width: 70%;
-    margin: auto;
-    margin-top: 2%;
+.icono-tabla{
+    font-size: 1.5rem;
 }
 
-.ingresos-date{
-    width: 90%;
-    margin: auto;
-    margin-top: 2%;
+.icon-color{
+    color:black
 }
 
-.ingresos-disponible{
-    width: 70%;
-    margin: auto;
-    margin-top: 2%;
+.form-servicios{
+    width:95%;
+    margin: auto
+}
+
+.form-control{
+    margin-top:2%;
+    text-align:center;
 }
