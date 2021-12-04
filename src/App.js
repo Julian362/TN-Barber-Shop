@@ -14,7 +14,7 @@ import IniciarSesion from './components/paginas/IniciarSesion'
 import HistorialCitas from './components/paginas/HistorialCitas';
 import Reportes from './components/paginas/Reportes';
 import AdministradorServicios from './components/paginas/AdministradorServicios';
-
+import Registro from './components/Registro'
 
 
 function App() {
@@ -62,6 +62,11 @@ function App() {
 				<Router>
 				<NavBar />
 					<Switch>
+						<Route path='/Agenda-tu-cita'>
+							<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/> 
+						</Route>
+						<Route path='/Historial-citas' component ={HistorialCitas} />
+						<Route path='/Registro' component ={Registro} />
 						<Route path='/' exact component={Inicio} />
 						<Route path='/Servicios' component={Servicios} />
 						<Route path='/Agenda-tu-cita'>
@@ -70,7 +75,6 @@ function App() {
 						<Route path='/Contactos' component={Contactos} />
 						<Route path='/Usuario' component={Usuario} />
 						<Route path='/Login' component={IniciarSesion} />
-						<Route path='/HistorialCitas' component={HistorialCitas} />
 						<Route path='/AdministradorServicios' >
 						<AdministradorServicios 
 						Servicios={Lista_Servicios}/>

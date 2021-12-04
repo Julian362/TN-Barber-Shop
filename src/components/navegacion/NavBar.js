@@ -36,6 +36,8 @@ function NavBar() {
                                 Usuario
                             </button>
                             <ul className="dropdown-menu">
+                                <Link className="dropdown-item" to='/Login'>Iniciar usuario</Link>
+                                <Link className="dropdown-item" to='/Registro'>Registro</Link>
                                 <Link className="dropdown-item" to='/Usuario'>Editar usuario</Link>
                                 <Link className="dropdown-item" to='/HistorialCitas'>Historial citas</Link>
                                 <Link className="dropdown-item" to='/Reportes'>Supervisor Reportes</Link>

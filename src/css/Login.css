@@ -1,8 +1,8 @@
 .Form-Inicio{
-    width: 40%;
+    width: 10%;
     max-width: 539px;
     min-width: 439px;
-    height: 592px;
+    height: 580px;
     margin: auto;
     background: #FFFFFF;
     border: 1px solid #C6BDBD;
@@ -11,10 +11,11 @@
     border-radius: 20px;
     position: relative;
 }
+
 #Iniciar{
     position: relative;
     top: 25%;
-    font-size: 36px;
+    font-size: 30px;
     margin: auto;
     text-align: center;
 }
@@ -25,41 +26,47 @@
     margin-left: 25%;
 }
 
-#Nombre{
+#formulario{
+    margin-left: 40px !important;
+}
+
+#Nombre{ 
+    opacity: 80%;   
     width: 83%;
-    top:38%;
+    top:35%;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     position: absolute;
 }
 
-#Contraseña{    
+#Contraseña{ 
+    opacity: 80%;   
     width: 83%;
-    top:50%;
+    top: 45%;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     position: absolute;
 }
 #Olvidar{
     color: black;
     position: relative;
     text-decoration:underline;
-    top: 53%;
+    top: 50%;
     text-align: center;
 }
 .btnIngresar{
     position: relative;
-    top: 53%;
-    margin-left: 42.5%;
+    top: 52% !important;
+    margin-left: 41%;
+
 }
 #Registrate{
     color: black;
     position: relative;
     text-decoration: underline;
     top: 55%;
-    text-align: center;
+    text-align: center !important;
 }
-
 
 @media (max-width:1366px){
     #Nombre{    
@@ -69,8 +76,12 @@
         width: 82%;
     }
     .btnIngresar{
-        margin-left: 43%;
+        margin-left: 41%;
     }
 
+}
+
+.espacio_para_que_no_se_vea_mal_el_icono_de_inicio{
+    height: 80px;
 }
 
