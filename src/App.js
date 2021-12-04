@@ -8,7 +8,7 @@ import { useState } from 'react';
 import Servicios from './components/paginas/Servicios';
 import Agenda from './components/paginas/Agenda';
 import Contactos from './components/paginas/Contactos';
-import Usuario from './components/paginas/Usuario';
+import EditarUsuario from './components/paginas/EditarUsuario';
 import Inicio from './components/paginas/Inicio';
 import IniciarSesion from './components/paginas/IniciarSesion'
 import HistorialCitas from './components/paginas/HistorialCitas';
@@ -73,7 +73,7 @@ function App() {
 						<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/>
 						</Route>
 						<Route path='/Contactos' component={Contactos} />
-						<Route path='/Usuario' component={Usuario} />
+						<Route path='/Editar-usuario' component={EditarUsuario} />
 						<Route path='/Login' component={IniciarSesion} />
 						<Route path='/AdministradorServicios' >
 						<AdministradorServicios 

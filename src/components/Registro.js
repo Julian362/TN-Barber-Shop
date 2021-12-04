@@ -29,7 +29,7 @@ function Registro() {
                                 <option value="2">T.I</option>
                                 <option value="3">C.E</option>
                             </select>
-                            <input className="form-control" id="Apellidos-Registro" placeholder="Documento" style={{width:"75%"}}/>
+                            <input className="form-control" id="Documento-Registro" placeholder="Documento" style={{width:"75%"}}/>
                     </div>
 
                     <input type="text" className="form-control input-Registro" id="Nickname-Registro" placeholder="Nickname" />
@@ -39,19 +39,17 @@ function Registro() {
 
                 </form>
 
-                <div className="custom-control custom-checkbox">
+                <div className="custom-control custom-checkbox Politica-Registro">
                     <input className="custom-control-input" type="checkbox" value="" id="flexCheckDefault" />
                     <label className="custom-control-label" for="flexCheckDefault">
                         Acepto política de tratamiento de datos
                     </label>
                 </div>
 
-                <p id="Politica-Registro"></p>
-
                 <button className="btn btn-primary btn-Registro ">Registrar</button>
 
                 <Link className="Login-Registro" to='/Login' id="Login-Registro"><p>Ya tengo cuenta</p></Link>
-                <div >
+                <div className="Redes-Registro">
                     <Redes />
                 </div>
             </div>

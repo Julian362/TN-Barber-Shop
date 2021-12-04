@@ -1,4 +1,4 @@
-.Form-Inicio-Registro {
+.Form-Inicio-Edicion {
     width: 10%;
     text-align: center;
     max-width: 539px;
@@ -23,20 +23,20 @@
 }
 
 
-#Iniciar-Registro {
+#Iniciar-Edicion {
     font-size: 30px;
     margin: auto;
     margin-top: 20px;
     text-align: center;
 }
 
-#logo-responsive-Registro {
+#logo-responsive-Edicion {
     margin: auto;
     width: 50%;
     height: auto;
 }
 
-#Nombres-Registro {
+#Nombres-Edicion {
     opacity: 80%;
     width: 85%;
     top: 24.5%;
@@ -45,7 +45,7 @@
 
 }
 
-#Apellidos-Registro {
+#Apellidos-Edicion {
     opacity: 80%;
     width: 85%;
     top: 31.6%;
@@ -54,7 +54,7 @@
 
 }
 
-.form-control-Registro {
+.form-control-Edicion {
     margin: auto;
     margin-top: 4.5%;
     opacity: 80%;
@@ -66,7 +66,7 @@
 
 }
 
-#Tipo-Registro {
+#Tipo-Edicion {
     opacity: 80%;
     width: 50%;
 
@@ -76,11 +76,11 @@
 
 }
 
-.tipo-Documento-Registro {
+.tipo-Documento-Edicion {
     width: 85%;
 }
 
-#Documento-Registro {
+#Documento-Edicion {
     opacity: 80%;
     width: 85%;
     top: 31.6%;
@@ -90,7 +90,7 @@
 
 }
 
-#Nickname-Registro {
+#Nickname-Edicion {
     opacity: 80%;
     width: 85%;
     top: 45.8%;
@@ -99,7 +99,7 @@
 
 }
 
-#Correo-Registro {
+#Correo-Edicion {
     opacity: 80%;
     width: 85%;
     top: 52.9%;
@@ -108,7 +108,7 @@
 
 }
 
-#Contraseñas-Registro {
+#Contraseñas-Edicion {
     opacity: 80%;
     width: 85%;
     top: 60%;
@@ -117,7 +117,7 @@
 
 }
 
-#Confirmar-Registro {
+#Confirmar-Edicion {
     opacity: 80%;
     width: 85%;
     top: 67.1%;
@@ -126,31 +126,31 @@
 
 }
 
-.Politica-Registro {
+.Politica-Edicion {
     text-decoration: underline;
     text-align: center !important;
     margin-top: 25px;
 }
 
-.btn-Registro {
+.btn-Edicion {
     height: 35px;
     width: 80px;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
-#Login-Registro {
+#Login-Edicion {
     color: black;
     text-decoration: underline;
     text-align: center !important;
 }
 
-.Redes-Registro {
+.Redes-Edicion {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.input-Registro {
+.input-Edicion {
     margin: auto;
     margin-top: 3%;
 }
