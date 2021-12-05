@@ -10,6 +10,7 @@ import Contactos from './components/paginas/Contactos';
 import Usuario from './components/paginas/Usuario';
 import Inicio from './components/paginas/Inicio';
 import HistorialCitas from './components/paginas/HistorialCitas';
+import GestionPersonal from './components/paginas/GestionPersonal';
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
           <Route path='/Agenda-tu-cita' component ={Agenda} />
           <Route path='/Contactos' component ={Contactos} />
           <Route path='/Usuario' component ={Usuario} />
-          <Route path='/HistorialCitas' component ={HistorialCitas} />
+          <Route path='/Historial-citas' component ={HistorialCitas} />
+          <Route path='/Gestion-personal' component ={GestionPersonal} />
 
         </Switch>
 

@@ -9,7 +9,7 @@ const HistorialCitas = () => {
             <div>
                 <img src="/img/imagAgenda.png" alt="" />
                 <img className="position-absolute top-0 start-0" src="/img/Res1.svg" alt=""
-                    style={{ height: "30%", marginTop: "20%" }} />
+                    style={{ height: "28%", marginTop: "17rem" }} />
             </div>
 
             <div className="container mt-4 mx-auto mw-100">

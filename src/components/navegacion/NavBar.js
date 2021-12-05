@@ -37,7 +37,8 @@ function NavBar() {
                             </button>
                             <ul className="dropdown-menu">
                                 <Link className="dropdown-item" to='/Usuario'>Editar usuario</Link>
-                                <Link className="dropdown-item" to='/HistorialCitas'>Historial citas</Link>                              
+                                <Link className="dropdown-item" to='/Historial-citas'>Historial citas</Link>
+                                <Link className="dropdown-item" to='/Gestion-personal'>Gestión personal</Link>                              
                             </ul>
                         </div>
                     </div>           
