@@ -1,0 +1,52 @@
+.supervisor-contenedor{
+    width: 80% ;
+    margin: auto;
+    margin-top: 15%;
+    background: #FFFFFF;
+    border: 1px solid #C6BDBD;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(199, 199, 199, 0.67);
+    border-radius: 20px;
+    text-align: center;
+}
+.servicios-containter{
+    width:95%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#logo-responsive-servicios{
+    width: 30%;
+    height: auto;
+    margin-bottom: 2%
+}
+
+.servicios-blanco-container{
+    background-color: #FFFFFF;
+}
+
+.servicios-tabla{
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom:2%;
+}
+
+.icono-tabla{
+    font-size: 1.5rem;
+}
+
+.icon-color{
+    color:black
+}
+
+.form-servicios{
+    width:95%;
+    margin: auto
+}
+
+.form-control-servicios-admin{
+    margin-top:2%;
+    text-align:center;
+}
