@@ -1,0 +1,15 @@
+.contenedor{
+    height: 723px;
+    width: 100%;
+    background:#E7BC4D;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+#LogoPrincial{
+    height: 86px;
+    margin-top: 20px;
+}
+.contenedor h2{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}

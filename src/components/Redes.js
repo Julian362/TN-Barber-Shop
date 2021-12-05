@@ -1,7 +1,7 @@
 function Redes(){
 
     const Contenedor = {
-        height:"20px",
+        height:"60px",
         textAlign:"center"
     }
 
