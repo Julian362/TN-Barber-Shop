@@ -4,15 +4,11 @@ import {Link} from 'react-router-dom'
 
 function NavBar() {
 
-    const style={
-        color:"#E7BC4D",
-        fontSize:"35px"
-    }
     return (
         <Fragment>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
-                <Link className="navbar-brand titulo" id="titulo" to='/' style={style}>NT Barbershop</Link>
+                <Link className="navbar-brand titulo" id="titulo" to='/'>NT Barbershop</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" id="logo" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span id="logo" ></span>
                 <Link to='/'>
