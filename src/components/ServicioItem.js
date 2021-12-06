@@ -8,7 +8,9 @@ function ServicioItem(props){
                     <h5> {props.duracion} - {props.precio} </h5>
                 </div>
                 <div className="col-2 contenedorimg">
-                    <img src={props.rutaimg} alt=""/>
+                    <button className="btn btn-outline-primary btnServicios" id="Servicio" >
+                        <img src={props.rutaimg} alt=""/>
+                    </button>
                 </div>
             </div>
         </div> 

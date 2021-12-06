@@ -9,7 +9,7 @@ const HistorialCitas = () => {
             <div>
                 <img src="/img/imagAgenda.png" alt="" />
                 <img className="position-absolute top-0 start-0" src="/img/Res1.svg" alt=""
-                    style={{ height: "30%", marginTop: "20%" }} />
+                    style={{ height: "28%", marginTop: "17rem" }} />
             </div>
 
             <div className="container mt-4 mx-auto mw-100">
@@ -53,7 +53,7 @@ const HistorialCitas = () => {
 
                         <div className="card bg-primary pb-4 mt-4"
                             style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
-                            <h2 className="text-center align-middle mt-2 mb-2">Historico de servicios</h2>
+                            <h2 className="text-center align-middle mt-2 mb-2">Histórico de servicios</h2>
                             <table className="table-responsive-sm table-hover table-bordered text-center align-middle">
                                 <thead>
                                     <tr style={{ backgroundColor: "#B7B7B7" }}>
