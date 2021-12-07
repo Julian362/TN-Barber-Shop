@@ -10,7 +10,7 @@ const GestionPersonalAdmin = (props) => {
     const listaEmpleados = props.empleados.map((p)=>
         <>
             <div className="col">
-                <div className="card" style={{width: "80%", marginLeft:"10%"}}>
+                <div className="card" style={{width: "80%", marginLeft:"10%", border:0}}>
                     <img src={p.rutafoto} className="card-img-top" alt="..." style={{height:"fit-content", width:"auto"}}/>
                     <div className="card-body">
                         <h5 className="card-title text-center">{p.Nickname}</h5>
@@ -46,7 +46,7 @@ const GestionPersonalAdmin = (props) => {
             </div>
 
             <div className="container mt-4 mb-4">
-                <div className="row row-cols">
+                <div className="row row-cols-6">
                     {listaEmpleados}
                 </div>
             </div>
