@@ -71,7 +71,7 @@ const HistorialCitas = (props) => {
 
                         <div className="card bg-primary pb-4 mt-4"
                             style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
-                            <h2 className="text-center align-middle mt-2 mb-2">Historico de servicios</h2>
+                            <h2 className="text-center align-middle mt-2 mb-2">Histórico de servicios</h2>
                             <table className="table-responsive-sm table-hover table-bordered text-center align-middle">
                                 <thead>
                                     <tr style={{ backgroundColor: "#B7B7B7" }}>

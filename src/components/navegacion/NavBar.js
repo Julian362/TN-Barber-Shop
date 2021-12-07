@@ -4,15 +4,11 @@ import {Link} from 'react-router-dom'
 
 function NavBar() {
 
-    const style={
-        color:"#E7BC4D",
-        fontSize:"35px"
-    }
     return (
         <Fragment>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
-                <Link className="navbar-brand titulo" id="titulo" to='/' style={style}>NT Barbershop</Link>
+                <Link className="navbar-brand titulo" id="titulo" to='/'>NT Barbershop</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" id="logo" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span id="logo" ></span>
                 <Link to='/'>
@@ -35,14 +31,16 @@ function NavBar() {
                             <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{fontSize: "20px"}}>
                                 Usuario
                             </button>
-                            <ul className="dropdown-menu">   
+                            <ul className="dropdown-menu">
+                                <Link className="dropdown-item" to='/Gestion-reserva'>Gestión reserva</Link>
                                 <Link className="dropdown-item" to='/Login'>Iniciar usuario</Link>
-                                <Link className="dropdown-item" to='/Registro'>Registro</Link>
+                                <Link className="dropdown-item" to='/Registro'>Registro usuario</Link>
                                 <Link className="dropdown-item" to='/Editar-usuario'>Editar usuario</Link>
                                 <Link className="dropdown-item" to='/Historial-citas'>Historial citas</Link>
                                 <Link className="dropdown-item" to='/Gestion-personal-administrador'>Gestión personal - Admin</Link>
                                 <Link className="dropdown-item" to='/Reportes'>Supervisor Reportes</Link>
                                 <Link className="dropdown-item" to='/AdministradorServicios'>Administrador Servicios</Link>
+                                
                             </ul>
                         </div>
                     </div>

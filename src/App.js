@@ -16,6 +16,7 @@ import GestionPersonalAdmin from './components/paginas/GestionPersonalAdmin';
 import Reportes from './components/paginas/Reportes';
 import AdministradorServicios from './components/paginas/AdministradorServicios';
 import Registro from './components/Registro'
+import GestionReserva from './components/paginas/GestionReserva';
 
 
 function App() {
@@ -88,12 +89,10 @@ function App() {
 						<Route path='/Gestion-personal-administrador'>
 							<GestionPersonalAdmin empleados={Lista_Trabajadores}/>
 						</Route>
+						<Route path='/Gestion-reserva' component={GestionReserva} />
 						<Route path='/Registro' component ={Registro} />
 						<Route path='/' exact component={Inicio} />
 						<Route path='/Servicios' component={Servicios} />
-						<Route path='/Agenda-tu-cita'>
-						<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/>
-						</Route>
 						<Route path='/Contactos' component={Contactos} />
 						<Route path='/Editar-usuario' component={EditarUsuario} />
 						<Route path='/Login' component={IniciarSesion} />
