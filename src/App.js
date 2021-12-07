@@ -17,6 +17,8 @@ import Reportes from './components/paginas/Reportes';
 import AdministradorServicios from './components/paginas/AdministradorServicios';
 import Registro from './components/Registro'
 import GestionReserva from './components/paginas/GestionReserva';
+import Gestion from './components/paginas/Gestion';
+
 
 
 function App() {
@@ -84,6 +86,7 @@ function App() {
 						<Route path='/Agenda-tu-cita'>
 							<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/> 
 						</Route>
+						<Route path='/Gestion' component={Gestion} />
 						<Route path='/Historial-citas'> 
 							<HistorialCitas agendados={lista_ServAgendados}
 											historial={lista_Historial}/>

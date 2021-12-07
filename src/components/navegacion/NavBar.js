@@ -40,6 +40,7 @@ function NavBar() {
                                 <Link className="dropdown-item" to='/Gestion-personal-administrador'>Gestión personal - Admin</Link>
                                 <Link className="dropdown-item" to='/Reportes'>Supervisor Reportes</Link>
                                 <Link className="dropdown-item" to='/AdministradorServicios'>Administrador Servicios</Link>
+                                <Link className="dropdown-item" to='/Gestion'>Gestion</Link>
                                 
                             </ul>
                         </div>

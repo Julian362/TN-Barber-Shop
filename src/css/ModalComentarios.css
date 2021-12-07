@@ -1,0 +1,48 @@
+#titleMC{
+    color: black;
+    text-align: center;
+    margin: 5px;
+}
+
+#titleMC img{
+    color: black;
+    text-align: center;
+    margin: 5px;
+}
+
+#boxMC p{
+    margin: 4px;
+}
+
+#serviMC{
+    color: #E7BC4D;
+    font-weight: bolder;
+}
+
+#boxMC2{
+    color: black;
+    text-align: center;
+}
+
+#calNumMC{
+    color: #E7BC4D;
+    font-size: 50px;
+}
+
+#calMC{
+    font-weight: bold;
+}
+
+#dataMC,#userMC{
+    color: #8f8e8b;
+    font-weight: bold;
+}
+
+#hrMC{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+
