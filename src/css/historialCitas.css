@@ -1,0 +1,4 @@
+
+#btn-contenedor .eliminar { display: none}
+#btn-contenedor:hover .programada { display: none}
+#btn-contenedor:hover .eliminar { display: inline}

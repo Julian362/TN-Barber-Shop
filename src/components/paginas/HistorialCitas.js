@@ -1,9 +1,44 @@
 import React from 'react'
 import Footer from '../Footer'
 import ModalCalificar from './ModalCalificar'
+import "../../css/historialCitas.css"
 
 
-const HistorialCitas = () => {
+const HistorialCitas = (props) => {
+    
+    
+
+    const servAgendados = props.agendados;
+
+    const listaAgendados = servAgendados.map((p)=>
+        <>
+            <tr>
+                <td>{p.servicio}</td>
+                <td>{p.fecha}</td>
+                <td>{p.duracion}</td>
+                <td>{p.encargado}</td>
+                <td>
+                    <div id="btn-contenedor">
+                        <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada">Programada</button>
+                        <button type="button" id="btn-eliminar" className="btn btn-danger mt-1 mb-1 w-75 eliminar">Eliminar</button>
+                    </div>
+                </td>
+            </tr>
+        </>
+    );
+
+    const listaHistorial = props.historial.map((p)=>
+        <>
+            <tr>
+                <td>{p.servicio}</td>
+                <td>{p.fecha}</td>
+                <td>{p.duracion}</td>
+                <td>{p.encargado}</td>
+                <td><ModalCalificar/></td>
+            </tr>
+        </>
+    );
+
     return (
         <>
             <div>
@@ -14,7 +49,7 @@ const HistorialCitas = () => {
 
             <div className="container mt-4 mx-auto mw-100">
                 <div className="row">
-                    <div className="col-sm-9">
+                    <div className="col-md-9">
                         <div className="card bg-primary pb-4"
                             style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
                             <h2 className="text-center align-middle mt-2 mb-2">Servicios agendados</h2>
@@ -29,24 +64,7 @@ const HistorialCitas = () => {
                                     </tr>
                                 </thead>
                                 <tbody style={{ backgroundColor: "#E4E4E4" }}>
-                                    <tr>
-                                        <td>Marcación de contornos</td>
-                                        <td>20 - 12 - 2021</td>
-                                        <td>01:00 pm - 03:00 pm</td>
-                                        <td>Jorge Isaacs</td>
-                                        <td>
-                                            <button type="button" className="btn btn-primary mt-1 mb-1 w-75">Programada</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Marcación de contornos</td>
-                                        <td>20 - 12 - 2021</td>
-                                        <td>01:00 pm - 03:00 pm</td>
-                                        <td>Jorge Isaacs</td>
-                                        <td>
-                                            <button type="button" className="btn btn-primary mt-1 mb-1 w-75">Programada</button>
-                                        </td>
-                                    </tr>
+                                    {listaAgendados}
                                 </tbody>
                             </table>
                         </div>
@@ -61,30 +79,16 @@ const HistorialCitas = () => {
                                         <th scope="col">Fecha</th>
                                         <th scope="col">Duración</th>
                                         <th scope="col">Encargado(a)</th>
-                                        <th scope="col">Estado</th>
+                                        <th scope="col">Calificar</th>
                                     </tr>
                                 </thead>
                                 <tbody style={{ backgroundColor: "#E4E4E4" }}>
-                                    <tr>
-                                        <td>Marcación de contornos</td>
-                                        <td>20 - 12 - 2021</td>
-                                        <td>01:00 pm - 03:00 pm</td>
-                                        <td>Jorge Isaacs</td>
-                                        <td><ModalCalificar/></td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>Marcación de contornos</td>
-                                        <td>20 - 12 - 2021</td>
-                                        <td>01:00 pm - 03:00 pm</td>
-                                        <td>Jorge Isaacs</td>
-                                        <td><ModalCalificar/></td>
-                                    </tr>
+                                    {listaHistorial}
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-md-3">
                         <div className="card bg-white"
                             style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
                             <img className="mt-4" src="/img/Res1.svg" alt=""
