@@ -27,13 +27,13 @@ const ModalComentarios = () => {
                                     <h5 id="titleMC">COMENTARIOS<img src="/img/inicio/comentarios.svg" alt="" className="" id="chair" /></h5>
                                     <div className="row bg-white" id="boxMC">
 
-                                        <div className="col-7" id="boxMC1">
+                                        <div className="col-8" id="boxMC1">
                                             <p id="serviMC">SERVICIO</p>
                                             <p>dlskfklsd dlskjfklsdj dlsjflksdjflkjsdalf lsdjjlkfjlsd dsfsd  dsfsd dsf </p>
                                             <p id="userMC">Nombre de Usuario</p>
                                         </div>
 
-                                        <div className="col-5" id="boxMC2">
+                                        <div className="col-4" id="boxMC2">
                                             <p id="calNumMC">4</p>
                                             <p id="calMC">Calificación</p>
                                             <p id="dataMC">12-12-12</p>
