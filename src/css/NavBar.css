@@ -1,5 +1,4 @@
 .navbar{
-    position: relative;
     opacity: 1;
     background-color: #000000;
 }
@@ -22,7 +21,7 @@
     padding-right: 40px;
     margin-left: 5%;
     margin-right: 5%;
-    width:40%; 
+    width:40%;
 }
 .contenedorDerecha{
     padding-left: 40px;

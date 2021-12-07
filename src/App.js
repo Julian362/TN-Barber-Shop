@@ -12,7 +12,7 @@ import EditarUsuario from './components/paginas/EditarUsuario';
 import Inicio from './components/paginas/Inicio';
 import IniciarSesion from './components/paginas/IniciarSesion'
 import HistorialCitas from './components/paginas/HistorialCitas';
-import GestionPersonal from './components/paginas/GestionPersonal';
+import GestionPersonalAdmin from './components/paginas/GestionPersonalAdmin';
 import Reportes from './components/paginas/Reportes';
 import AdministradorServicios from './components/paginas/AdministradorServicios';
 import Registro from './components/Registro'
@@ -60,6 +60,21 @@ function App() {
 		{ id: "7", Nickname: "El yuca", rutafoto: "/img/ImgTrabajador.png" },
 	];
 
+	const [lista_ServAgendados] = useState([
+		{ id: "1", servicio: "Marcación de contornos", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
+		{ id: "2", servicio: "Diseño de corte", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
+		{ id: "3", servicio: "Diseño de barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
+		{ id: "4", servicio: "Diseño de corte y barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:true}
+	]);
+
+	const [lista_Historial] = useState([
+		{ id: "1", servicio: "Marcación de contornos", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
+		{ id: "2", servicio: "Diseño de corte", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
+		{ id: "3", servicio: "Diseño de barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
+		{ id: "4", servicio: "Diseño de corte y barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado: true}
+	]);
+
+	
 	return (
 		<>
 			<div className="containerimg">
@@ -69,16 +84,18 @@ function App() {
 						<Route path='/Agenda-tu-cita'>
 							<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/> 
 						</Route>
-						<Route path='/Historial-citas' component ={HistorialCitas} />
-						<Route path='/Gestion-personal' component={GestionPersonal} />
 						<Route path='/Gestion' component={Gestion} />
+						<Route path='/Historial-citas'> 
+							<HistorialCitas agendados={lista_ServAgendados}
+											historial={lista_Historial}/>
+						</Route>
+						<Route path='/Gestion-personal-administrador'>
+							<GestionPersonalAdmin empleados={Lista_Trabajadores}/>
+						</Route>
 						<Route path='/Gestion-reserva' component={GestionReserva} />
 						<Route path='/Registro' component ={Registro} />
 						<Route path='/' exact component={Inicio} />
 						<Route path='/Servicios' component={Servicios} />
-						<Route path='/Agenda-tu-cita'>
-						<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/>
-						</Route>
 						<Route path='/Contactos' component={Contactos} />
 						<Route path='/Editar-usuario' component={EditarUsuario} />
 						<Route path='/Login' component={IniciarSesion} />
