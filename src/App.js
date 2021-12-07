@@ -17,6 +17,8 @@ import Reportes from './components/paginas/Reportes';
 import AdministradorServicios from './components/paginas/AdministradorServicios';
 import Registro from './components/Registro'
 import GestionReserva from './components/paginas/GestionReserva';
+import Gestion from './components/paginas/Gestion';
+
 
 
 function App() {
@@ -69,6 +71,7 @@ function App() {
 						</Route>
 						<Route path='/Historial-citas' component ={HistorialCitas} />
 						<Route path='/Gestion-personal' component={GestionPersonal} />
+						<Route path='/Gestion' component={Gestion} />
 						<Route path='/Gestion-reserva' component={GestionReserva} />
 						<Route path='/Registro' component ={Registro} />
 						<Route path='/' exact component={Inicio} />

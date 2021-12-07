@@ -1,0 +1,173 @@
+.portada1 {
+    box-shadow: 0px 10px 5px red;
+    z-index: 1 !important;
+
+}
+
+.portada2 img {
+    box-shadow: 0px 10px 5px red;
+    -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+
+}
+
+
+.contenedor1 {
+    background-color: #E7BC4D;
+    -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+}
+
+#btnagendarc p {
+    display: block;
+
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 100%;
+}
+
+#btnagendarc {
+    display: block;
+    margin-bottom: 1% !important;
+}
+
+.contenedor1 h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.contenedor1 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 10%;
+    height: 10%;
+}
+
+
+.contenedor2 {
+    background-color: #E7BC4D;
+    background-size: contain;
+    -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    padding: 3%;
+}
+
+.contenedor2 h3 {
+    color: #ffffff !important;
+    text-align: center;
+}
+
+.contenedor2 p {
+    text-align: center;
+    font-size: 130%;
+    font-weight: bold;
+    margin: 1%;
+}
+
+.contenedor2 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 30%;
+    height: 30%;
+}
+
+.contenedor3 {
+    background-color: #E7BC4D;
+    background-size: contain;
+    padding: 50px;
+    -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+}
+
+.contenedor3 h3 {
+    color: #ffffff;
+}
+
+.contenedor3 img {
+    height: 50%;
+}
+
+#chair {
+    width: 5%;
+}
+
+#btncomentarios p {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 100%;
+}
+
+.portada2 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 10px 5px red;
+    -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+
+}
+#imgResposive2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    width: 90%;
+    height: 100%;
+    opacity: 0;
+}
+
+.portada3 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 10px 5px red;
+    -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+
+}
+
+.portada4 {
+    background-color: #ffffff;
+    background-size: contain;
+    padding: 50px;
+    -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+}
+
+#imgResposive3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding: 5%;
+    width: 80%;
+    height: 100%;
+    opacity: 0;
+}
+
+#imgResposive4 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 30%;
+    height: 100%;
+}
+
+#linkModalMC p {
+    color: red;
+}
