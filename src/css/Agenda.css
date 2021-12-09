@@ -18,6 +18,7 @@
     width: 80%;
     height: auto;
     margin:auto;
+    text-align: justify;
 }
 .ServicioItem{
     width: fit-content;
@@ -25,16 +26,22 @@
     display: inline-block;
 }
 .ServicioItem img{
-    margin-top: 7px;
-    height: 40px;
-    width: auto;
-
-    
+    margin-top: 4px;
+    height: 47px;
+    width: 52px;    
 }
+.contenedorimg{
+    text-align:end;
+}
+.contenedorinfo h4, .contenedorinfo h5{
+    padding-left: 10%;  
+}
+
 .trabajadores{
     width: 84%;
     height: auto;
     margin: auto;
+    text-align: center;
 }
 .ListaTrabajadores{
     width: fit-content;
@@ -69,5 +76,11 @@
 @media (max-width:750px){
     .ServicioItem{
         width: 100%;
+    }
+    .contenedorinfo h4, .contenedorinfo h5{
+        padding-left: 0px;  
+    }
+    .contenedorimg{
+        text-align: left;
     }
 }

@@ -59,7 +59,6 @@ function App() {
 		{ id: "6", Nickname: "RockyFer", rutafoto: "/img/ImgTrabajador.png" },
 		{ id: "7", Nickname: "El yuca", rutafoto: "/img/ImgTrabajador.png" },
 		{ id: "8", Nickname: "RockyFer", rutafoto: "/img/ImgTrabajador.png" },
-		{ id: "9", Nickname: "El yuca", rutafoto: "/img/ImgTrabajador.png" },
 	];
 
 	const [lista_ServAgendados] = useState([
