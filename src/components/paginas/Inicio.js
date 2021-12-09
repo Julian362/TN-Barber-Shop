@@ -26,7 +26,7 @@ const Inicio = (props) => {
                 <img src="/img/inicio/portada1.jpg" alt="" />
             </div>
 
-            <div className="contenedor1 row">
+            <div className="contenedor1">
                 <img src="/img/inicio/chair.svg" alt="" className="" />
                 <h2>SERVICIOS</h2>
                 <div className="col-12">
@@ -40,20 +40,20 @@ const Inicio = (props) => {
             </div>
 
             <div className="contenedor2 row">
-                <div className="col-4">
+                <div className="col-4 cont2">
                     <img src="/img/inicio/horarios.svg" alt="" />
                     <h3>HORARIOS</h3>
                     <p>Lunes a Domingo</p>
                     <p>10:00 am a 08:00 pm</p>
                 </div>
-                <div className="col-4">
+                <div className="col-4 cont2">
                     <img src="/img/inicio/phone.svg" alt="" />
                     <h3>LINEA DE ATENCIÓN</h3>
                     <p>Linea de atcion al cliente</p>
                     <p>+57 310 555 55 55</p>
 
                 </div>
-                <div className="col-4">
+                <div className="col-4 cont2">
                     <img src="/img/inicio/sucursales.svg" alt="" />
                     <h3>SEDES</h3>
                     <p>Bolivar, Cartagena</p>

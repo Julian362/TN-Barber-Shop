@@ -51,7 +51,7 @@ const HistorialCitas = (props) => {
                     </form>
                     <div className="card bg-primary pb-4 servicios-containter"
                         style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
-                        <h3 className="text-center align-middle mt-2 mb-2">Usuarios atendidos</h3>
+                        <h3 className="text-center align-middle mt-2 mb-2">Lista de servicios</h3>
                         <div className="servicios-blanco-container">
                             <table className="table-responsive-sm table-hover table-bordered text-center servicios-tabla">
                                 <thead>
