@@ -50,3 +50,23 @@
     margin: auto;
     margin-top: 2%;
 }
+
+.h5-center{
+    margin-bottom: 0;
+    margin: auto;
+    padding-right: 1rem;
+}
+
+.border-form{
+    border: 1px solid #ced4da!important;
+    border-radius: 11px!important;
+}
+
+.input-group-fit-content{
+    width: fit-content;
+    margin: auto;
+}
+
+.input-group-container{
+    width: 100%;
+}
