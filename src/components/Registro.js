@@ -4,6 +4,16 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
+var host = "http://localhost:8081";
+const consultar = function() {
+    const nombre = document.getElementById("Nombres-Registro").value;
+    console.log(nombre)
+    fetch(`${host}/producto/consultar/${nombre}`)
+    .then(res => res.json())
+    .then(res => {
+        document.getElementById("Apellidos-Registro").value = res.price;
+    })
+}
 function Registro() {
 
     return (
@@ -23,7 +33,7 @@ function Registro() {
                     <input type="text" className="form-control input-Registro" id="Apellidos-Registro" placeholder="Apellidos" />
 
                     <div className="input-group input-Registro" style={{width:"85%"}}>
-                            <select class="form-select form-select-cc" style={{width:"25%"}}>
+                            <select className="form-select form-select-cc" style={{width:"25%"}}>
                                 <option selected>Tipo</option>
                                 <option value="1">C.C</option>
                                 <option value="2">T.I</option>
@@ -46,7 +56,7 @@ function Registro() {
                     </label>
                 </div>
 
-                <button className="btn btn-primary btn-Registro ">Registrar</button>
+                <button className="btn btn-primary btn-Registro" onClick={consultar}>Registrar</button>
 
                 <Link className="Login-Registro" to='/Login' id="Login-Registro"><p>Ya tengo cuenta</p></Link>
                 <div className="Redes-Registro">
@@ -57,6 +67,10 @@ function Registro() {
         </div>
     );
 }
+
+
+
+
 
 
 export default Registro
