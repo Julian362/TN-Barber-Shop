@@ -17,13 +17,13 @@ const HistorialCitas = (props) => {
                 <td>{p.Descripción}</td>
                 <td>{p.duracion}</td>
                 <td>
-                    <div className="row">
-                        <div className="col-6 mx-auto">
+                    <div className="input-group">
+                        <div className="mx-auto">
                             <Link className="icon-color">
                                 <i className="bi bi-pencil-square icono-tabla"></i>
                             </Link>
                             </div>
-                        <div className="col-6 mx-auto">
+                        <div className="mx-auto">
                             <Link className="icon-color">
                                 <i className="bi bi-trash icono-tabla"></i>
                             </Link>
@@ -47,7 +47,7 @@ const HistorialCitas = (props) => {
                             <input type="text" aria-label="Last name" class="form-control form-control-servicios-admin ml-2" placeholder="Duración"/>
                         </div>
                         <textarea className="form-control form-control-servicios-admin" aria-label="With textarea" placeholder="Descripción"></textarea>
-                        <button type="button" className="btn btn-primary btn-lg mt-3">Guardar</button>
+                        <button type="button" className="btn btn-primary btn-guardar">Guardar</button>
                     </form>
                     <div className="card bg-primary pb-4 servicios-containter"
                         style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>

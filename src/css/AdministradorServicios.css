@@ -50,3 +50,10 @@
     margin-top:2%;
     text-align:center;
 }
+
+.btn-guardar{
+    width: fit-content;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

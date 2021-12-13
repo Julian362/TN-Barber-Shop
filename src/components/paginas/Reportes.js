@@ -51,7 +51,6 @@ const HistorialCitas = (props) => {
     );
 
     const total = lista_usuarios_atendidos.map((p) => p.cantidad).reduce((prev, curr) => prev + curr, 0);
-    
 
     return (
             <>
@@ -63,25 +62,15 @@ const HistorialCitas = (props) => {
                         style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
                         <h3 className="text-center align-middle mt-2 mb-2">Usuarios atendidos</h3>
                         <div className="reportes-blanco-container">
-                            <div className="row usuarios-atendidos-date">
-                                <div className="col">
-                                    <div className="row">
-                                        <div className="col">
-                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="desde-date">Desde:</h5>
-                                        </div>
-                                        <div className="col">
-                                            <input type="date" className="form-control" id="desde-date" value="2018-07-22"/>
-                                        </div>
+                            <div className="usuarios-atendidos-date">
+                                <div className="input-group input-group-container">
+                                    <div className="input-group  input-group-fit-content">
+                                        <h5 className="h5-center" for="desde-date" onChange="Desde()">Desde:</h5>
+                                        <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
-                                </div>
-                                <div className="col">
-                                    <div className="row">
-                                        <div className="col">
-                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="hasta-date">Hasta:</h5>
-                                        </div>
-                                        <div className="col">
-                                            <input type="date" className="form-control" id="hasta-date" value="2018-07-22"/>
-                                        </div>
+                                    <div className="input-group input-group-fit-content">
+                                        <h5 className="h5-center" for="hasta-date">Hasta:</h5>
+                                        <input type="date" className="form-control border-form" id="hasta-date"  />
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +78,7 @@ const HistorialCitas = (props) => {
                                 <thead>
                                     <tr style={{ backgroundColor: "#B7B7B7" }}>
                                         <th style={{ width: "50%", height:"3rem" }} >Fecha</th>
-                                        <th style={{ width: "50%", height:"3rem" }} >Cantidad de usuariosa atendidos</th>
+                                        <th style={{ width: "50%", height:"3rem" }} >Cantidad de usuarios atendidos</th>
                                     </tr>
                                 </thead>
                                 <tbody style={{ backgroundColor: "#E4E4E4" }}>
@@ -108,38 +97,22 @@ const HistorialCitas = (props) => {
                         style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
                         <h3 className="text-center align-middle mt-2 mb-2">Ingresos</h3>
                         <div className="reportes-blanco-container">
-                            <div className="row ingresos-date">
-                                <div className="col">
-                                    <div className="row">
-                                        <div className="col-4">
-                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="desde-date">Desde:</h5>
-                                        </div>
-                                        <div className="col">
-                                            <input type="date" className="form-control" id="desde-date" value="2018-07-22"/>
-                                        </div>
+                            <div className="ingresos-date">
+                                <div className="input-group input-group-container">
+                                    <div className="input-group  input-group-fit-content">
+                                        <h5 className="h5-center" for="desde-date">Desde:</h5>
+                                        <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
-                                </div>
-                                <div className="col">
-                                    <div className="row">
-                                        <div className="col-4">
-                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="hasta-date">Hasta:</h5>
-                                        </div>
-                                        <div className="col">
-                                            <input type="date" className="form-control" id="hasta-date" value="2018-07-22"/>
-                                        </div>
+                                    <div className="input-group  input-group-fit-content">
+                                        <h5 className="h5-center" for="hasta-date">Hasta:</h5>
+                                        <input type="date" className="form-control border-form" id="hasta-date"  />
                                     </div>
-                                </div>
-                                <div className="col-5">
-                                    <div className="row">
-                                        <div className="col-6">
-                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="reportes-servicios">Servicios :</h5>
-                                        </div>
-                                        <div className="col-6">
-                                            <select class="form-select form-control" id="reportes-servicios">
-                                                <option selected>Seleccionar servicio</option>
-                                                {lista_servicios}
-                                            </select>
-                                        </div>
+                                    <div className="input-group  input-group-fit-content">
+                                        <h5 className="h5-center" for="reportes-servicios">Servicios :</h5>
+                                        <select class="form-select form-control border-form" id="reportes-servicios">
+                                            <option selected>Seleccionar servicio</option>
+                                            {lista_servicios}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -167,28 +140,18 @@ const HistorialCitas = (props) => {
                         style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
                         <h3 className="text-center align-middle mt-2 mb-2">Espacios disponibles</h3>
                         <div className="reportes-blanco-container">
-                            <div className="row ingresos-disponible">
-                                <div className="col">
-                                    <div className="row">
-                                        <div className="col-4">
-                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="desde-date">Desde:</h5>
-                                        </div>
-                                        <div className="col">
-                                            <input type="date" className="form-control" id="desde-date" value="2018-07-22"/>
-                                        </div>
+                            <div className="ingresos-disponible">
+                                <div className="input-group input-group-container">
+                                    <div className="input-group  input-group-fit-content">
+                                        <h5 className="h5-center" for="desde-date">Desde:</h5>
+                                        <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
-                                </div>
-                                <div className="col-8">
-                                    <div className="row">
-                                        <div className="col-6">
-                                            <h5 className="position-absolute top-50 start-50 translate-middle" for="reportes-servicios">Servicios :</h5>
-                                        </div>
-                                        <div className="col-6">
-                                            <select class="form-select form-control" id="reportes-servicios">
-                                                <option selected>Seleccionar servicio</option>
-                                                {lista_servicios}
-                                            </select>
-                                        </div>
+                                    <div className="input-group  input-group-fit-content">
+                                        <h5 className="h5-center" for="reportes-servicios">Servicios :</h5>
+                                        <select class="form-select form-control border-form" id="reportes-servicios">
+                                            <option selected>Seleccionar servicio</option>
+                                            {lista_servicios}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
