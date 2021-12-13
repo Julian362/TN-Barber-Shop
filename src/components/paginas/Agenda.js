@@ -17,7 +17,6 @@ function agenda(props){
                 rutaimg = { p.rutaimg }
             />
         );
-
     const vTrabajadores = props.Trabajadores;
     const Lista_Trabajadores = vTrabajadores.map ( t =>
             <TrabajadoresItem 
