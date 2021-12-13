@@ -3,23 +3,25 @@ import Footer from '../Footer'
 import FormGestionPersonal from './FormGestionPersonal'
 import Redes from '../Redes'
 import "../../css/FormularioGestion.css"
-
+import { useState, useEffect, Fragment } from 'react';
 
 
 const GestionPersonalAdmin = () => {
 
+
+    const [listaEmpleados, setlistaEmpleados] = useState([]);
+
     var host = "http://localhost:8081";
-    const consulta = function () {
+    useEffect(function () {
         const rol = "usuario interno";
         fetch(`${host}/consultar/trabajadores/${rol}`)
             .then(res => res.json())
             .then(res => {
-                return res;
-                
+                setlistaEmpleados(res);
             })
-    }
-    console.log()
-    const listaEmpleados = consulta.map((p) =>
+    })
+
+    const empleados = listaEmpleados.map((p) =>
                     <>
                         <div className="col">
                             <div className="card" style={{ width: "80%", marginLeft: "10%", border: 0 }}>
@@ -31,7 +33,6 @@ const GestionPersonalAdmin = () => {
                         </div>
                     </>
                 )
-    console.log(listaEmpleados);
 
     return (
         <>
@@ -46,12 +47,12 @@ const GestionPersonalAdmin = () => {
 
 
                 <div className="btn-group col-6 m-auto" role="group" aria-label="Basic radio toggle button group">
-                    <div onClick={consulta}>
+                    <div>
                         <input type="radio" className="btn-check btn-primary btnradio1" name="btnradio" id="btnradio1" autocomplete="off" checked style={{ backgroundColor: "red" }} />
                         <label className="btn btn-outline-secondary" for="btnradio1">Personal</label>
                     </div>
 
-                    <div onClick={consulta}>
+                    <div>
                         <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
                         <label className="btn btn-outline-secondary" for="btnradio3">Supervisor</label>
                     </div>
@@ -67,7 +68,7 @@ const GestionPersonalAdmin = () => {
 
                 <div className="container mt-4 mb-4">
                     <div className="row row-cols-6">
-                        {listaEmpleados}
+                        {empleados}
                     </div>
                 </div>
 
