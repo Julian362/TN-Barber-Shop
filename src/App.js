@@ -85,7 +85,9 @@ function App() {
 						<Route path='/Agenda-tu-cita'>
 							<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/> 
 						</Route>
-						<Route path='/GestionPersonalSuper' component={GestionPersonalSuper} />
+						<Route path='/GestionPersonalSuper'>
+							<GestionPersonalSuper empleados={Lista_Trabajadores}/>
+						</Route>
 						<Route path='/Historial-citas'> 
 							<HistorialCitas agendados={lista_ServAgendados}
 											historial={lista_Historial}/>
