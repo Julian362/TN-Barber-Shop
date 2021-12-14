@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FormGestionPersonal = () => {
+const FormGestionPersonal = (props) => {
 
     const styleInput = {
         height: "42px",
@@ -9,6 +9,11 @@ const FormGestionPersonal = () => {
         fontSize: "20px",
         borderRadius: "11px"
     }
+
+    const vTrabajadores = props.trabajador;
+    console.log(vTrabajadores)
+    // const Lista_Trabajadores = document.getElementById("nombre").value = vTrabajadores.nombre
+ 
 
     return (
         <>

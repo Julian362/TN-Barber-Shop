@@ -7,20 +7,34 @@ import { useState, useEffect, Fragment } from 'react';
 
 
 const GestionPersonalAdmin = () => {
-
-
+    const [trabajador, setTrabajador] = useState([]);
     const [listaEmpleados, setlistaEmpleados] = useState([]);
-
     var host = "http://localhost:8081";
     useEffect(function () {
-        const rol = "usuario interno";
-        fetch(`${host}/consultar/trabajadores/${rol}`)
+        const solicitarEmpleados = async () => {
+            const rol = await "usuario interno";
+            fetch(`${host}/consultar/trabajadores/${rol}`)
             .then(res => res.json())
             .then(res => {
                 setlistaEmpleados(res);
-            })
+            })            
+        }
+        solicitarEmpleados();
     })
-
+    var cargarDatos ;
+    useEffect(function () {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    cargarDatos = (nickname) => {
+        const solicitarTrabajador = async () => {
+            await fetch(`${host}/consultar/trabajador/${nickname}`)
+            .then(res => res.json())
+            .then(res => {
+                setTrabajador(res);
+            })            
+        }
+        solicitarTrabajador();
+    }
+   })
     const empleados = listaEmpleados.map((p) =>
                     <>
                         <div className="col">
@@ -59,7 +73,7 @@ const GestionPersonalAdmin = () => {
 
                 </div>
 
-                <FormGestionPersonal />
+                <FormGestionPersonal trabajador={trabajador}/>
 
                 <div className="input-group mb-3 m-auto col-6">
                     <input type="text" className="form-control text-center " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" style={{ height: "fit-content", width: "auto", paddingLeft: "15%" }} />
