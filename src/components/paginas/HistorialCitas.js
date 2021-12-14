@@ -3,14 +3,11 @@ import Footer from '../Footer'
 import ModalCalificar from './ModalCalificar'
 import "../../css/historialCitas.css"
 
-
 const HistorialCitas = (props) => {
     
-    
-
     const servAgendados = props.agendados;
 
-    const listaAgendados = servAgendados.map((p)=>
+    const listaAgendados = servAgendados.map((p) =>
         <>
             <tr>
                 <td>{p.servicio}</td>
@@ -19,22 +16,22 @@ const HistorialCitas = (props) => {
                 <td>{p.encargado}</td>
                 <td>
                     <div id="btn-contenedor">
-                        <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada">Programada</button>
-                        <button type="button" id="btn-eliminar" className="btn btn-danger mt-1 mb-1 w-75 eliminar">Eliminar</button>
+                        <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada">Programado</button>
+                        <button type="button" id="btn-eliminar" className="btn btn-danger mt-1 mb-1 w-75 eliminar">Cancelar</button>
                     </div>
                 </td>
             </tr>
         </>
     );
 
-    const listaHistorial = props.historial.map((p)=>
+    const listaHistorial = props.historial.map((p) =>
         <>
             <tr>
                 <td>{p.servicio}</td>
                 <td>{p.fecha}</td>
                 <td>{p.duracion}</td>
                 <td>{p.encargado}</td>
-                <td><ModalCalificar/></td>
+                <td><ModalCalificar /></td>
             </tr>
         </>
     );
@@ -138,12 +135,10 @@ const HistorialCitas = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-
+           </div>
             <div>
                 <Footer />
             </div>
-
         </>
     )
 }

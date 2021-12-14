@@ -39,15 +39,15 @@ function App() {
 	];
 
 	const [lista_ingresos] = useState([
-		{ id: "1", fecha: "23/11/2021",nombre: "Marcación de contornos",precio: 5},
-		{ id: "2", fecha: "23/11/2021",nombre: "Marcación de contornos",precio: 5},
-		{ id: "3", fecha: "23/11/2021",nombre: "Marcación de contornos",precio: 5}
+		{ id: "1", fecha: "23/11/2021", nombre: "Marcación de contornos", precio: 5 },
+		{ id: "2", fecha: "23/11/2021", nombre: "Marcación de contornos", precio: 5 },
+		{ id: "3", fecha: "23/11/2021", nombre: "Marcación de contornos", precio: 5 }
 	]);
 
 	const [lista_disponibles] = useState([
-		{ id: "1", fecha: "23/11/2021",inicio: "01:00 pm",fin: "2:00 pm"},
-		{ id: "2", fecha: "23/11/2021",inicio: "01:00 pm",fin: "2:00 pm"},
-		{ id: "3", fecha: "23/11/2021",inicio: "01:00 pm",fin: "2:00 pm"}
+		{ id: "1", fecha: "23/11/2021", inicio: "01:00 pm", fin: "2:00 pm" },
+		{ id: "2", fecha: "23/11/2021", inicio: "01:00 pm", fin: "2:00 pm" },
+		{ id: "3", fecha: "23/11/2021", inicio: "01:00 pm", fin: "2:00 pm" }
 	]);
 
 	const Lista_Trabajadores = [
@@ -62,57 +62,66 @@ function App() {
 	];
 
 	const [lista_ServAgendados] = useState([
-		{ id: "1", servicio: "Marcación de contornos", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
-		{ id: "2", servicio: "Diseño de corte", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
-		{ id: "3", servicio: "Diseño de barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
-		{ id: "4", servicio: "Diseño de corte y barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:true}
+		{ id: "1", servicio: "Marcación de contornos", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: "agendado" },
+		{ id: "2", servicio: "Diseño de corte", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: "agendado" },
+		{ id: "3", servicio: "Diseño de barba", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: "agendado" },
+		{ id: "4", servicio: "Diseño de corte y barba", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: true }
 	]);
+
+	const [lista_ServReservados] = [lista_ServAgendados]
 
 	const [lista_Historial] = useState([
-		{ id: "1", servicio: "Marcación de contornos", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
-		{ id: "2", servicio: "Diseño de corte", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
-		{ id: "3", servicio: "Diseño de barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado:"agendado"},
-		{ id: "4", servicio: "Diseño de corte y barba", fecha: "23/11/2021", duracion:"01:00 pm - 03:00 pm", encargado:"Jorge Isaacs", estado: true}
+		{ id: "1", servicio: "Marcación de contornos", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: "agendado" },
+		{ id: "2", servicio: "Diseño de corte", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: "agendado" },
+		{ id: "3", servicio: "Diseño de barba", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: "agendado" },
+		{ id: "4", servicio: "Diseño de corte y barba", fecha: "23/11/2021", duracion: "01:00 pm - 03:00 pm", encargado: "Jorge Isaacs", estado: true }
 	]);
 
-	
+
 	return (
 		<>
 			<div className="containerimg">
 				<Router>
-				<NavBar />
+					<NavBar />
 					<Switch>
 						<Route path='/Agenda-tu-cita'>
-							<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores}/> 
+							<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores} />
 						</Route>
 						<Route path='/GestionPersonalSuper'>
-							<GestionPersonalSuper empleados={Lista_Trabajadores}/>
+							<GestionPersonalSuper empleados={Lista_Trabajadores} />
 						</Route>
-						<Route path='/Historial-citas'> 
+						<Route path='/Historial-citas'>
 							<HistorialCitas agendados={lista_ServAgendados}
-											historial={lista_Historial}/>
+								historial={lista_Historial} />
 						</Route>
 						<Route path='/Gestion-personal-administrador'>
-							<GestionPersonalAdmin empleados={Lista_Trabajadores}/>
+							<GestionPersonalAdmin empleados={Lista_Trabajadores} />
 						</Route>
-						<Route path='/Gestion-reserva' component={GestionReserva} />
-						<Route path='/Registro' component ={Registro} />
-						<Route path='/' exact component={Inicio} />
-						<Route path='/Servicios' component={Servicios} />
-						<Route path='/Contactos' component={Contactos} />
+						<Route path='/Gestion-reserva'>
+							<GestionReserva reserva={lista_ServReservados} />
+						</Route>
+						<Route path='/Registro' component={Registro} >
+						</Route>
+						<Route path='/' exact component={Inicio} >
+						</Route>
+						<Route path='/Servicios' component={Servicios} >
+						</Route>
+						<Route path='/Contactos' component={Contactos} >
+						</Route>
 						<Route path='/Editar-usuario' component={EditarUsuario} />
-						<Route path='/Login' component={IniciarSesion} />
+						<Route path='/Login' component={IniciarSesion} >
+						</Route>
 						<Route path='/AdministradorServicios' >
-						<AdministradorServicios 
-						Servicios={Lista_Servicios}/>
+							<AdministradorServicios
+								Servicios={Lista_Servicios} />
 						</Route>
 						<Route exact path='/Reportes' >
-						<Reportes
-						atendidos= {lista_usuarios_atendidos}
-						Servicios={Lista_Servicios}
-						ingresos={lista_ingresos}
-						disponibles={lista_disponibles}
-						/>
+							<Reportes
+								atendidos={lista_usuarios_atendidos}
+								Servicios={Lista_Servicios}
+								ingresos={lista_ingresos}
+								disponibles={lista_disponibles}
+							/>
 						</Route>
 					</Switch >
 				</Router >
