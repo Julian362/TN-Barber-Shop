@@ -69,11 +69,11 @@ function Registro() {
                     <input type="text" className="form-control input-Registro" id="Nickname-Registro" placeholder="Nickname" />
                     <input type="mail" className="form-control input-Registro" id="Correo-Registro" placeholder="Correo" />
                     <div className="input-group input-Registro" style={{width:"85%"}} >
-                        <input type="button" class="form-control form-icon" id="contraseña-show" onClick={showContraseña} style={{width:"25%"}} value="Mostrar"/>
+                        <input type="button" className="form-control form-icon" id="contraseña-show" onClick={showContraseña} style={{width:"25%"}} value="Mostrar"/>
                         <input type="password" className="form-control input-Registro" id="Contraseñas-Registro" placeholder="Contraseña" style={{width:"75%"}} />
                     </div>
                     <div className="input-group input-Registro" style={{width:"85%"}} >
-                        <input type="button" class="form-control form-icon" id="Confirmar-show" onClick={showContraseña2} style={{width:"25%"}} value="Mostrar"/>
+                        <input type="button" className="form-control form-icon" id="Confirmar-show" onClick={showContraseña2} style={{width:"25%"}} value="Mostrar"/>
                         <input type="password" className="form-control input-Registro" id="Confirmar-Registro" placeholder="Confirmar contraseña" style={{width:"75%"}} />
                     </div>
                 </form>

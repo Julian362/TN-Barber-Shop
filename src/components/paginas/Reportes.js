@@ -109,7 +109,7 @@ const HistorialCitas = (props) => {
                                     </div>
                                     <div className="input-group  input-group-fit-content">
                                         <h5 className="h5-center" for="reportes-servicios">Servicios :</h5>
-                                        <select class="form-select form-control border-form" id="reportes-servicios">
+                                        <select className="form-select form-control border-form" id="reportes-servicios">
                                             <option selected>Seleccionar servicio</option>
                                             {lista_servicios}
                                         </select>
@@ -148,7 +148,7 @@ const HistorialCitas = (props) => {
                                     </div>
                                     <div className="input-group  input-group-fit-content">
                                         <h5 className="h5-center" for="reportes-servicios">Servicios :</h5>
-                                        <select class="form-select form-control border-form" id="reportes-servicios">
+                                        <select className="form-select form-control border-form" id="reportes-servicios">
                                             <option selected>Seleccionar servicio</option>
                                             {lista_servicios}
                                         </select>

@@ -22,7 +22,7 @@ function EditarUsuario() {
                     <input type="text" className="form-control input-Edicion" id="Apellidos-Edicion" placeholder="Apellidos" />
 
                     <div className="input-group input-Edicion" style={{width:"85%"}}>
-                            <select class="form-select form-select-cc" style={{width:"25%"}}>
+                            <select className="form-select form-select-cc" style={{width:"25%"}}>
                                 <option selected>Tipo</option>
                                 <option value="1">C.C</option>
                                 <option value="2">T.I</option>
