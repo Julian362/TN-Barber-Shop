@@ -10,8 +10,8 @@ const GestionPersonalAdmin = () => {
     const [listaEmpleados, setlistaEmpleados] = useState([]);
     var host = "http://localhost:8081";
     useEffect(function () {
-        const solicitarEmpleados = async () => {
-            const rol = await "usuario interno";
+        const solicitarEmpleados = () => {
+            const rol = "usuario interno";
             fetch(`${host}/consultar/trabajadores/${rol}`)
             .then(res => res.json())
             .then(res => {
