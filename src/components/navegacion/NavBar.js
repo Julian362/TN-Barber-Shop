@@ -27,7 +27,7 @@ function NavBar() {
                     <Link className="col nav-link" id="listasD" to='/Agenda-tu-cita'>Agenda tu cita</Link>
 
                     <div className="col nav-link" id="listasD">
-                        <div class="btn-group">
+                        <div className="btn-group">
                             <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{fontSize: "20px"}}>
                                 Usuario
                             </button>

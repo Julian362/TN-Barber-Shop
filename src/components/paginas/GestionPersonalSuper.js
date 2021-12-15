@@ -28,9 +28,9 @@ const GestionPersonal = (props) => {
                 <h3 className="text-center mt-3">Personal</h3>
                 {/* ok */}
                 <FormGestionPersonal />
-                <div class="input-group mb-3 m-auto col-6">
-                    <input type="text" class="form-control text-center " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" style={{ height: "fit-content", width: "auto", paddingLeft: "12%" }} />
-                    <span class="input-group-text bi bi-search" id="basic-addon1"></span>
+                <div className="input-group mb-3 m-auto col-6">
+                    <input type="text" className="form-control text-center " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" style={{ height: "fit-content", width: "auto", paddingLeft: "12%" }} />
+                    <span className="input-group-text bi bi-search" id="basic-addon1"></span>
                 </div>
                 <div className="container mt-4 mb-4" >
                     <div className="row row-cols-6">

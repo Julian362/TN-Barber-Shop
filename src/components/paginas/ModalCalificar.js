@@ -30,7 +30,7 @@ const ModalCalificar = () => {
                             <h4 className="mt-1 mb-2">Agregar comentario</h4>
                             <div className="card bg-white ps-3 pe-3 pt-3 pb-3 ms-3 me-3"
                                 style={{ borderRadius: "20px", boxShadow: "5px 5px 4px rgba(199, 199, 199, 0.67)" }}>
-                                <textarea class="form-control" style={{ borderRadius: "20px", height:"320px"}} placeholder="" id="floatingTextarea"></textarea>
+                                <textarea className="form-control" style={{ borderRadius: "20px", height:"320px"}} placeholder="" id="floatingTextarea"></textarea>
                             </div>
                         </div>
                     </div>

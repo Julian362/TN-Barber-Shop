@@ -7,7 +7,6 @@ import { useState, useEffect, Fragment } from 'react';
 
 
 const GestionPersonalAdmin = () => {
-    const [trabajador, setTrabajador] = useState([]);
     const [listaEmpleados, setlistaEmpleados] = useState([]);
     var host = "http://localhost:8081";
     useEffect(function () {
@@ -20,24 +19,23 @@ const GestionPersonalAdmin = () => {
             })            
         }
         solicitarEmpleados();
-    })
-//    const variableTrabajador = function () {
-//         const solicitarTrabajador = () => {
-//             const nickname = "DavHD";
-//             fetch(`${host}/consultar/trabajador/${nickname}`)
-//             .then(res => res.json())
-//             .then(res => {
-//                 setTrabajador(res);
-//             })            
-//         }
-//         solicitarTrabajador();
-//     }
+    },[])
 
-//     console.log(variableTrabajador)
+   const cargarDatosInput = (nick,e) =>{
+        const variable_axu_trabajador = listaEmpleados.find((p) => p.nickname === nick);
+        document.getElementById("nombre").value = variable_axu_trabajador.nombre;
+        document.getElementById("apellido").value = variable_axu_trabajador.apellido;
+        document.getElementById("Documento-Registro2").value = variable_axu_trabajador.numero_documento;
+        document.getElementById("tipo-Documento-Registro2").innerHTML = variable_axu_trabajador.tipo_documento;
+        document.getElementById("nickname").value = variable_axu_trabajador.nickname;
+        document.getElementById("correo").value = variable_axu_trabajador.correo;
+        document.getElementById("cargo").value = variable_axu_trabajador.rol;
+        document.getElementById("contrasena").value = variable_axu_trabajador.password;
+   }
 
     const empleados = listaEmpleados.map((p) =>
                     <>
-                        <div className="col" id={p.nickname}>
+                        <div className="col" id={p.nickname} onClick={() => cargarDatosInput(p.nickname)}>
                             <div className="card" style={{ width: "80%", marginLeft: "10%", border: 0 }}>
                                 <img src="/img/ImgTrabajador.png" className="card-img-top" alt="..." style={{ height: "fit-content", width: "auto" }} />
                                 <div className="card-body">
@@ -73,7 +71,7 @@ const GestionPersonalAdmin = () => {
 
                 </div>
 
-                <FormGestionPersonal trabajador={trabajador}/>
+                <FormGestionPersonal/>
 
                 <div className="input-group mb-3 m-auto col-6">
                     <input type="text" className="form-control text-center " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" style={{ height: "fit-content", width: "auto", paddingLeft: "15%" }} />
