@@ -25,18 +25,18 @@ function Registro() {
             }
     }
     var host = "http://localhost:8081";
-    const consulta = function(e) {
+    const registrar = function(e) {
         const nombre = document.getElementById("Nombres-Registro").value;
+        const apellido = document.getElementById("Apellidos-Registro").value;
+        const documento = document.getElementById("Documento-Registro").value;
+        const t_documento = document.getElementById("tipo-Documento-Registro").value;
+        const nickname = document.getElementById("Nickname-Registro").value;
+        const correo = document.getElementById("Correo-Registro").value;
+        const password = document.getElementById("Contraseñas-Registro").value;
         console.log(nombre);
-        fetch(`${host}/producto/consultar/${nombre}`)
-            .then(res => res.json())
+        fetch(`${host}/usuario/registrar/${nombre}-${apellido}-${documento}-${t_documento}-${nickname}-${correo}-${password}`)
             .then(res => {
-                document.getElementById("Apellidos-Registro").value = res.apellido;
-                document.getElementById("Documento-Registro").value = res.numero_documento;
-                document.getElementById("tipo-Documento-Registro").innerHTML = res.tipo_documento;
-                document.getElementById("Nickname-Registro").value = res.nickname;
-                document.getElementById("Correo-Registro").value = res.correo;
-                document.getElementById("Contraseñas-Registro").value = res.password;
+                alert("registrado correctamente")
             })
     }
 
@@ -76,8 +76,6 @@ function Registro() {
                         <input type="button" class="form-control form-icon" id="Confirmar-show" onClick={showContraseña2} style={{width:"25%"}} value="Mostrar"/>
                         <input type="password" className="form-control input-Registro" id="Confirmar-Registro" placeholder="Confirmar contraseña" style={{width:"75%"}} />
                     </div>
-                </form>
-
                 <div className="custom-control custom-checkbox Politica-Registro">
                     <input className="custom-control-input" type="checkbox" value="" id="flexCheckDefault" />
                     <label className="custom-control-label" for="flexCheckDefault">
@@ -85,7 +83,9 @@ function Registro() {
                     </label>
                 </div>
 
-                <button className="btn btn-primary btn-Registro" onClick={consulta} >Registrar</button>
+                <button className="btn btn-primary btn-Registro" onClick={registrar} >Registrar</button>
+                </form>
+
 
                 <Link className="Login-Registro" to='/Login' id="Login-Registro"><p>Ya tengo cuenta</p></Link>
                 <div className="Redes-Registro">

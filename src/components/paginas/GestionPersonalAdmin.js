@@ -11,8 +11,8 @@ const GestionPersonalAdmin = () => {
     const [listaEmpleados, setlistaEmpleados] = useState([]);
     var host = "http://localhost:8081";
     useEffect(function () {
-        const solicitarEmpleados = async () => {
-            const rol = await "usuario interno";
+        const solicitarEmpleados = () => {
+            const rol = "usuario interno";
             fetch(`${host}/consultar/trabajadores/${rol}`)
             .then(res => res.json())
             .then(res => {
@@ -21,23 +21,23 @@ const GestionPersonalAdmin = () => {
         }
         solicitarEmpleados();
     })
-    var cargarDatos ;
-    useEffect(function () {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    cargarDatos = (nickname) => {
-        const solicitarTrabajador = async () => {
-            await fetch(`${host}/consultar/trabajador/${nickname}`)
-            .then(res => res.json())
-            .then(res => {
-                setTrabajador(res);
-            })            
-        }
-        solicitarTrabajador();
-    }
-   })
+//    const variableTrabajador = function () {
+//         const solicitarTrabajador = () => {
+//             const nickname = "DavHD";
+//             fetch(`${host}/consultar/trabajador/${nickname}`)
+//             .then(res => res.json())
+//             .then(res => {
+//                 setTrabajador(res);
+//             })            
+//         }
+//         solicitarTrabajador();
+//     }
+
+//     console.log(variableTrabajador)
+
     const empleados = listaEmpleados.map((p) =>
                     <>
-                        <div className="col">
+                        <div className="col" id={p.nickname}>
                             <div className="card" style={{ width: "80%", marginLeft: "10%", border: 0 }}>
                                 <img src="/img/ImgTrabajador.png" className="card-img-top" alt="..." style={{ height: "fit-content", width: "auto" }} />
                                 <div className="card-body">

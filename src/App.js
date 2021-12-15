@@ -50,6 +50,7 @@ function App() {
 		{ id: "3", fecha: "23/11/2021", inicio: "01:00 pm", fin: "2:00 pm" }
 	]);
 
+
 	const Lista_Trabajadores = [
 		{ id: "1", Nickname: "Racastano", rutafoto: "/img/ImgTrabajador.png" },
 		{ id: "2", Nickname: "DavHD", rutafoto: "/img/ImgTrabajador.png" },
