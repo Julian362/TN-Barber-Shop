@@ -23,6 +23,9 @@ import GestionPersonalSuper from './components/paginas/GestionPersonalSuper';
 
 function App() {
 
+
+	const [paginasCargar, setPaginasCargar] = useState({});
+
 	const [lista_usuarios_atendidos] = useState([
 		{ id: "1", fecha: "23/11/2021", cantidad: 12 },
 		{ id: "1", fecha: "23/11/2021", cantidad: 20 }
@@ -82,7 +85,7 @@ function App() {
 		<>
 			<div className="containerimg">
 				<Router>
-					<NavBar />
+					<NavBar paginasCargar={paginasCargar} setPaginasCargar={setPaginasCargar} />
 					<Switch>
 						<Route path='/Agenda-tu-cita'>
 							<Agenda Servicios={Lista_Servicios} Trabajadores={Lista_Trabajadores} />
@@ -109,7 +112,8 @@ function App() {
 						<Route path='/Contactos' component={Contactos} >
 						</Route>
 						<Route path='/Editar-usuario' component={EditarUsuario} />
-						<Route path='/Login' component={IniciarSesion} >
+						<Route path='/Login' >
+							<IniciarSesion setPaginasCargar={setPaginasCargar}/>
 						</Route>
 						<Route path='/AdministradorServicios' >
 							<AdministradorServicios

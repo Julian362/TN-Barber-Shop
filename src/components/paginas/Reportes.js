@@ -65,11 +65,11 @@ const HistorialCitas = (props) => {
                             <div className="usuarios-atendidos-date">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" for="desde-date" onChange="Desde()">Desde:</h5>
+                                        <h5 className="h5-center" htmlFor="desde-date" onChange="Desde()">Desde:</h5>
                                         <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
                                     <div className="input-group input-group-fit-content">
-                                        <h5 className="h5-center" for="hasta-date">Hasta:</h5>
+                                        <h5 className="h5-center" htmlFor="hasta-date">Hasta:</h5>
                                         <input type="date" className="form-control border-form" id="hasta-date"  />
                                     </div>
                                 </div>
@@ -100,17 +100,17 @@ const HistorialCitas = (props) => {
                             <div className="ingresos-date">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" for="desde-date">Desde:</h5>
+                                        <h5 className="h5-center" htmlFor="desde-date">Desde:</h5>
                                         <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" for="hasta-date">Hasta:</h5>
+                                        <h5 className="h5-center" htmlFor="hasta-date">Hasta:</h5>
                                         <input type="date" className="form-control border-form" id="hasta-date"  />
                                     </div>
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" for="reportes-servicios">Servicios :</h5>
+                                        <h5 className="h5-center" htmlFor="reportes-servicios">Servicios :</h5>
                                         <select className="form-select form-control border-form" id="reportes-servicios">
-                                            <option selected>Seleccionar servicio</option>
+                                            <option defaultValue>Seleccionar servicio</option>
                                             {lista_servicios}
                                         </select>
                                     </div>
@@ -143,13 +143,13 @@ const HistorialCitas = (props) => {
                             <div className="ingresos-disponible">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" for="desde-date">Desde:</h5>
+                                        <h5 className="h5-center" htmlFor="desde-date">Desde:</h5>
                                         <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" for="reportes-servicios">Servicios :</h5>
+                                        <h5 className="h5-center" htmlFor="reportes-servicios">Servicios :</h5>
                                         <select className="form-select form-control border-form" id="reportes-servicios">
-                                            <option selected>Seleccionar servicio</option>
+                                            <option defaultValue>Seleccionar servicio</option>
                                             {lista_servicios}
                                         </select>
                                     </div>

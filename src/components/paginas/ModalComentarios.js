@@ -6,7 +6,7 @@ const ModalComentarios = () => {
         <>
             <button type="button" className="btn btn-secondary col-2 m-auto p-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver comentarios</button>
 
-            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content" style={{ backgroundImage: "url(/img/inicio/bg-comentarios.svg)" }}>
                         <div className="modal-header border-0">

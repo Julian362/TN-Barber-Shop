@@ -16,12 +16,13 @@ const GestionPersonalAdmin = () => {
             .then(res => res.json())
             .then(res => {
                 setlistaEmpleados(res);
-            })            
+            })
         }
         solicitarEmpleados();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-   const cargarDatosInput = (nick,e) =>{
+    const cargarDatosInput = (nick,e) =>{
         const variable_axu_trabajador = listaEmpleados.find((p) => p.nickname === nick);
         document.getElementById("nombre").value = variable_axu_trabajador.nombre;
         document.getElementById("apellido").value = variable_axu_trabajador.apellido;
@@ -31,7 +32,7 @@ const GestionPersonalAdmin = () => {
         document.getElementById("correo").value = variable_axu_trabajador.correo;
         document.getElementById("cargo").value = variable_axu_trabajador.rol;
         document.getElementById("contrasena").value = variable_axu_trabajador.password;
-   }
+    }
 
     const empleados = listaEmpleados.map((p) =>
                     <>
@@ -60,13 +61,13 @@ const GestionPersonalAdmin = () => {
 
                 <div className="btn-group col-6 m-auto" role="group" aria-label="Basic radio toggle button group">
                     <div>
-                        <input type="radio" className="btn-check btn-primary btnradio1" name="btnradio" id="btnradio1" autocomplete="off" checked style={{ backgroundColor: "red" }} />
-                        <label className="btn btn-outline-secondary" for="btnradio1">Personal</label>
+                        <input type="radio" className="btn-check btn-primary btnradio1" name="btnradio" id="btnradio1" autoComplete="off" defaultChecked style={{ backgroundColor: "red" }} />
+                        <label className="btn btn-outline-secondary" htmlFor="btnradio1">Personal</label>
                     </div>
 
                     <div>
-                        <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
-                        <label className="btn btn-outline-secondary" for="btnradio3">Supervisor</label>
+                        <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autoComplete="off" />
+                        <label className="btn btn-outline-secondary" htmlFor="btnradio3">Supervisor</label>
                     </div>
 
                 </div>

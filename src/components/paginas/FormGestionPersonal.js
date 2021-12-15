@@ -32,7 +32,7 @@ const FormGestionPersonal = (props) => {
                         <div className="col m-0">
                             <div className="input-group m-auto" style={{ width: "85%" }}>
                                 <select className="form-select form-select-cc"  style={{ width: "25%", borderRadius:"11px 0px 0px 11px" }}>
-                                    <option id="tipo-Documento-Registro2" selected>Tipo</option>
+                                    <option id="tipo-Documento-Registro2" defaultValue>Tipo</option>
                                     <option value="1">C.C</option>
                                     <option value="2">T.I</option>
                                     <option value="3">C.E</option>

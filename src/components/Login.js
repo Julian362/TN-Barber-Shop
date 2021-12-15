@@ -2,8 +2,26 @@ import '../css/Login.css'
 import Redes from '../components/Redes'
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import React, { useCallback } from 'react'
 
-function Login() {
+function Login(props) {
+
+    var host = "http://localhost:8081";
+    const ensayo = (e) => {
+        const iniciarSesion = () => {
+            const correo = document.getElementById("Correo").value;
+            const password = document.getElementById("Contraseña").value;
+            fetch(`${host}/usuario/iniciarSesion/${correo}-${password}`)
+            .then(res => res.json())
+            .then(res => {
+                alert("inicio de sesión correctamente")
+                const a = () => {props.setPaginasCargar(res)}
+                a()
+            })
+        }
+        iniciarSesion();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
 
     return (
         <div>
@@ -19,7 +37,7 @@ function Login() {
                     <input type="password" className="form-control" id="Contraseña" placeholder="Contraseña" />
                 </form>
                 <Link to=""><p id="Olvidar">¿Olvidaste tu contraseña?</p></Link>
-                <button className="btn btn-primary btn-Ingresar ">Ingresar</button>
+                <button className="btn btn-primary btn-Ingresar " onClick={ensayo}>Ingresar</button>
                 <Link className="Registro" to='/Registro' id="Registrate"><p>Registrarse</p></Link>
                 <div className="Redes-Login">
                     <Redes />

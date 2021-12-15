@@ -11,7 +11,7 @@ function ModalAgendar(props) {
     <button type="button" className="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
         <img src={props.rutafoto} alt="" /> 
     </button>
-        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content" style={{ backgroundImage: "url(/img/modalComentario.png)"}}>
                         <div className="modal-header border-0">                            

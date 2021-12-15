@@ -58,7 +58,7 @@ function Registro() {
 
                     <div className="input-group input-Registro" style={{width:"85%"}}>
                             <select className="form-select form-select-cc" style={{width:"25%"}}>
-                                <option selected id="tipo-Documento-Registro">Tipo</option>
+                                <option defaultValue id="tipo-Documento-Registro">Tipo</option>
                                 <option value="1">C.C</option>
                                 <option value="2">T.I</option>
                                 <option value="3">C.E</option>
@@ -80,7 +80,7 @@ function Registro() {
 
                 <div className="custom-control custom-checkbox Politica-Registro">
                     <input className="custom-control-input" type="checkbox" value="" id="flexCheckDefault" />
-                    <label className="custom-control-label" for="flexCheckDefault">
+                    <label className="custom-control-label" htmlFor="flexCheckDefault">
                         Acepto política de tratamiento de datos
                     </label>
                 </div>

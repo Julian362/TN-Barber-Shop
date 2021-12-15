@@ -1,8 +1,8 @@
 import Login from "../Login";
-function IniciarSesion(){
+function IniciarSesion(props){
     return(
         <div >
-            <Login/>
+            <Login setPaginasCargar={props.setPaginasCargar}/>
         </div>
     );
 }
