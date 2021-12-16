@@ -26,6 +26,7 @@ function App() {
 
 	const [paginasCargar, setPaginasCargar] = useState({});
 
+
 	const [lista_usuarios_atendidos] = useState([
 		{ id: "1", fecha: "23/11/2021", cantidad: 12 },
 		{ id: "1", fecha: "23/11/2021", cantidad: 20 }
@@ -95,8 +96,9 @@ function App() {
 							<GestionPersonalSuper empleados={Lista_Trabajadores} />
 						</Route>
 						<Route path='/Historial-citas'>
-							<HistorialCitas agendados={lista_ServAgendados}
-								historial={lista_Historial} />
+							<HistorialCitas
+								historial={lista_Historial} 
+								paginasCargar={paginasCargar} setPaginasCargar={setPaginasCargar}/>
 						</Route>
 						<Route path='/Gestion-personal-administrador'>
 							<GestionPersonalAdmin empleados={Lista_Trabajadores} />

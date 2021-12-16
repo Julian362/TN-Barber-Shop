@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect, Fragment } from 'react';
-
+import { Fragment } from 'react';
+//import { useState, useEffect, Fragment } from 'react';
 
 function NavBar(props) {
 
@@ -22,11 +22,10 @@ function NavBar(props) {
         <>
             <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{ fontSize: "20px" }}>
                 {props.paginasCargar.nombre}
-            </button><ul className="dropdown-menu">
-                <Link className="dropdown-item" to='/Gestion-reserva'>Gestión reserva</Link>
+            </button>
+            <ul className="dropdown-menu">
                 <Link className="dropdown-item" to='/Editar-usuario'>Editar usuario</Link>
                 <Link className="dropdown-item" to='/Historial-citas'>Historial citas</Link>
-
             </ul>
         </>
     );
@@ -36,15 +35,11 @@ function NavBar(props) {
                 {props.paginasCargar.nombre}
             </button><ul className="dropdown-menu">
                 <Link className="dropdown-item" to='/Gestion-reserva'>Gestión reserva</Link>
-                <Link className="dropdown-item" to='/Login'>Iniciar usuario</Link>
-                <Link className="dropdown-item" to='/Registro'>Registro usuario</Link>
                 <Link className="dropdown-item" to='/Editar-usuario'>Editar usuario</Link>
-                <Link className="dropdown-item" to='/Historial-citas'>Historial citas</Link>
                 <Link className="dropdown-item" to='/Gestion-personal-administrador'>Gestión personal - Admin</Link>
                 <Link className="dropdown-item" to='/Reportes'>Supervisor Reportes</Link>
                 <Link className="dropdown-item" to='/AdministradorServicios'>Administrador Servicios</Link>
                 <Link className="dropdown-item" to='/GestionPersonalSuper'>Gestion personal-Super</Link>
-
             </ul>
         </>
     );
