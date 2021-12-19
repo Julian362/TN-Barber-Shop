@@ -2,7 +2,6 @@ import '../css/Login.css'
 import Redes from '../components/Redes'
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import React, { useCallback } from 'react'
 
 function Login(props) {
 

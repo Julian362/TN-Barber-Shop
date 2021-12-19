@@ -1,19 +1,53 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from '../Footer'
 import ModalCalificar from './ModalCalificar'
 import "../../css/historialCitas.css"
 
 const HistorialCitas = (props) => {
     
-    const servAgendados = props.agendados;
+    const [listaAgendados, setlistaAgendados] = useState([]);
+    var host = "http://localhost:8081";
+    var nickname = props.paginasCargar.nickname;
+    
+    useEffect(function () {
+        const solicitarAgenda = () => {
+            const estado = "programado";
+            console.log(nickname)
+            fetch(`${host}/consultar/citasAgendadas/${nickname}-${estado}`)
+            .then(res => res.json())
+            .then(res => {
+                setlistaAgendados(res);
+                
+            })
+        }
+        solicitarAgenda();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
+    
+    /* const agendados = (
+        <>
+            <tr>
+                <td>{listaAgendados.servicio}</td>
+                <td>{listaAgendados.fecha}</td>
+                <td>{listaAgendados.duracion}</td>
+                <td>{listaAgendados.nombre} {listaAgendados.apellido}</td>
+                <td>
+                    <div id="btn-contenedor">
+                        <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada">Programado</button>
+                        <button type="button" id="btn-eliminar" className="btn btn-danger mt-1 mb-1 w-75 eliminar">Cancelar</button>
+                    </div>
+                </td>
+            </tr>
+        </>
+    ); */
 
-    const listaAgendados = servAgendados.map((p) =>
+    const agendados = listaAgendados.map((p) =>
         <>
             <tr>
                 <td>{p.servicio}</td>
                 <td>{p.fecha}</td>
                 <td>{p.duracion}</td>
-                <td>{p.encargado}</td>
+                <td>{p.nombre} {p.apellido}</td>
                 <td>
                     <div id="btn-contenedor">
                         <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada">Programado</button>
@@ -61,7 +95,7 @@ const HistorialCitas = (props) => {
                                     </tr>
                                 </thead>
                                 <tbody style={{ backgroundColor: "#E4E4E4" }}>
-                                    {listaAgendados}
+                                    {agendados}
                                 </tbody>
                             </table>
                         </div>
