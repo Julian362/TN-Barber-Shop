@@ -9,7 +9,7 @@ function TraerDatos() {
     const nickname = document.getElementById("Nickname-Edicion").value;
     console.log(nickname);
     fetch(`${host}/usuario/datospersonales/${nickname}`)
-        .then(res => res.json())            
+        .then(res => res.json())
         .then(res => {
             console.log(res);
             document.getElementById("Nombres-Edicion").value = res.nombre;
@@ -65,13 +65,11 @@ function EditarUsuario() {
                             <input className="form-control" id="Documento-Edicion" placeholder="Documento" style={{width:"75%"}}/>
                     </div>
 
-                    
                     <input type="mail" className="form-control input-Edicion" id="Correo-Edicion" placeholder="Correo" />
                     <input type="password" className="form-control input-Edicion" id="Contraseñas-Edicion" placeholder="Contraseña" />
                     <input type="password" className="form-control input-Edicion" id="Confirmar-Edicion" placeholder="Confirmar contraseña" />
 
                 </form>
-                
                 <button className="btn btn-primary btn-Edicion mr-3" onClick={TraerDatos}> Mis datos </button>
                 <button className="btn btn-primary btn-Edicion " onClick={EditarDatos}> Editar </button>
 

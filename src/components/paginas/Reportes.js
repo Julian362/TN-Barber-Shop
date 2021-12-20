@@ -2,9 +2,26 @@ import React from 'react';
 import Footer from '../Footer';
 import Redes from '../Redes'
 import '../../css/Reportes.css';
+import { useState, useEffect, Fragment } from 'react';
+
 
 
 const HistorialCitas = (props) => {
+
+    const [atendidos, setListaAtendidos] = useState([]);
+    var host = "http://localhost:8081";
+    useEffect(function () {
+        const solicitarAtendidos = () => {
+            const fecha = document.getElementById("desde-date-atenidos").value;
+            fetch(`${host}/consultar/atendidos/${fecha}`)
+            .then(res => res.json())
+            .then(res => {
+                setListaAtendidos(res);
+            })
+        }
+        solicitarAtendidos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const lista_usuarios_atendidos = props.atendidos;
 
@@ -65,12 +82,8 @@ const HistorialCitas = (props) => {
                             <div className="usuarios-atendidos-date">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="desde-date" onChange="Desde()">Desde:</h5>
-                                        <input type="date" className="form-control border-form" id="desde-date"  />
-                                    </div>
-                                    <div className="input-group input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="hasta-date">Hasta:</h5>
-                                        <input type="date" className="form-control border-form" id="hasta-date"  />
+                                        <h5 className="h5-center" htmlFor="desde-date" onChange="Desde()">Día:</h5>
+                                        <input type="date" className="form-control border-form" id="desde-date-atenidos"  />
                                     </div>
                                 </div>
                             </div>
@@ -100,12 +113,8 @@ const HistorialCitas = (props) => {
                             <div className="ingresos-date">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="desde-date">Desde:</h5>
+                                        <h5 className="h5-center" htmlFor="desde-date">Día :</h5>
                                         <input type="date" className="form-control border-form" id="desde-date"  />
-                                    </div>
-                                    <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="hasta-date">Hasta:</h5>
-                                        <input type="date" className="form-control border-form" id="hasta-date"  />
                                     </div>
                                     <div className="input-group  input-group-fit-content">
                                         <h5 className="h5-center" htmlFor="reportes-servicios">Servicios :</h5>
@@ -143,7 +152,7 @@ const HistorialCitas = (props) => {
                             <div className="ingresos-disponible">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="desde-date">Desde:</h5>
+                                        <h5 className="h5-center" htmlFor="desde-date">Día:</h5>
                                         <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
                                     <div className="input-group  input-group-fit-content">
