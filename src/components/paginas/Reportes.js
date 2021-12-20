@@ -2,26 +2,11 @@ import React from 'react';
 import Footer from '../Footer';
 import Redes from '../Redes'
 import '../../css/Reportes.css';
-import { useState, useEffect, Fragment } from 'react';
+import { Fragment } from 'react';
 
 
 
 const HistorialCitas = (props) => {
-
-    const [atendidos, setListaAtendidos] = useState([]);
-    var host = "http://localhost:8081";
-    useEffect(function () {
-        const solicitarAtendidos = () => {
-            const fecha = document.getElementById("desde-date-atenidos").value;
-            fetch(`${host}/consultar/atendidos/${fecha}`)
-            .then(res => res.json())
-            .then(res => {
-                setListaAtendidos(res);
-            })
-        }
-        solicitarAtendidos();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
 
     const lista_usuarios_atendidos = props.atendidos;
 

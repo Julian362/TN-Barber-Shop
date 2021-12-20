@@ -57,7 +57,10 @@ function NavBar(props) {
     if (props.paginasCargar.rol === "usuario externo") {
         paginaRenderizada = paginaRenderizada_usuario_externo
     }
-    else if (props.paginasCargar.rol === "usuario interno") {
+    else if (props.paginasCargar.rol === "usuario interno admin") {
+        paginaRenderizada = paginaRenderizada_usuario_interno
+    }
+    else if (props.paginasCargar.rol === "usuario interno super") {
         paginaRenderizada = paginaRenderizada_usuario_interno
     }
     return (
