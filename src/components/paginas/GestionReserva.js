@@ -2,27 +2,59 @@ import React from 'react'
 import Footer from '../Footer'
 import '../../css/reserva.css'
 import Redes from '../Redes'
+import { useState, useEffect, Fragment } from 'react';
 
-const GestionReserva = (props) => {
+var host = "http://localhost:8081";
+const GestionReserva = () => {
+    const [listaAgenda, setlistaAgenda] = useState([]);
 
-    const serviciosReservados = props.reserva;
+    useEffect(function () {
+        const solicitarProgramados = () => {
+            const estado = "programado";
+            fetch(`${host}/consultar/agenda/${estado}`)
+                .then(res => res.json())
+                .then(res => {
+                    setlistaAgenda(res);
+                })
+        }
+        solicitarProgramados();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
-    const listaReserva = serviciosReservados.map((p) =>
+    // Función para eliminar los servicios agendados
+
+    const eliminarServicio = (p) => {
+        const _id=p._id;
+        const eliminarProgramados = () => {
+            fetch(`${host}/eliminar/agenda/${_id}`)
+                .then(res => res.json())
+                .then(res => {
+                    document.getElementById(p._id).innerHTML=""
+                })
+        }
+        eliminarProgramados();
+       } //by Julian :)
+
+
+    const listaReserva = listaAgenda.map((p) =>
         <>
-            <tr>
-                <td>{p.servicio}</td>
-                <td>{p.fecha}</td>
-                <td>{p.duracion}</td>
-                <td>{p.encargado}</td>
-                <td>
+            <tr  id={p._id}>
+                {/* <td>{p._id}</td>  */}
+                <td id={p.servicio}>{p.servicio}</td>
+                <td id={p.fecha}>{p.fecha}</td>
+                <td id={p.hora_inicio}>{p.hora_inicio}</td>
+                <td id={p.duracion}>{p.duracion + " minutos"}</td>
+                <td id={p.nombre + " " + p.apellido}>{p.nombre + " " + p.apellido}</td>
+                <td key={p.servicio}>
                     <div id="btn-contenedor">
-                        <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada">Programado</button>
-                        <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 eliminar">Cancelar</button>
+                        <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada" >Cancelar</button>
+                        {<button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 eliminar" onClick={() => eliminarServicio(p)}>Cancelar</button>}
                     </div>
                 </td>
             </tr>
         </>
     );
+
     return (
         <>
             <div className="reserva-contenedor">
@@ -39,6 +71,7 @@ const GestionReserva = (props) => {
                             <tr style={{ backgroundColor: "#B7B7B7" }}>
                                 <th scope="col">Servicio</th>
                                 <th scope="col">Fecha</th>
+                                <th scope="col">Hora inicio</th>
                                 <th scope="col">Duración</th>
                                 <th scope="col">Encargado(a)</th>
                                 <th scope="col">Estado</th>
@@ -55,7 +88,6 @@ const GestionReserva = (props) => {
             <div>
                 <Footer />
             </div>
-
         </>
     )
 }
