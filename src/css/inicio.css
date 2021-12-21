@@ -33,8 +33,17 @@
     color: #ffffff;
     text-align: center;
 }
-
+/* 
 .contenedor1 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 10%;
+    height: 10%;
+} */
+
+#correcion{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -89,6 +98,20 @@
     -webkit-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
     -moz-box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
     box-shadow: inset 0px 10px 5px -5px rgba(0, 0, 0, 0.58);
+}
+
+.centrarImg img{
+    width: 100%;
+
+}
+
+.centrarImg p{
+    position: absolute;
+    width: auto;
+    color: #ffffff;
+    left: 35%;
+    top: 20%;
+    
 }
 
 .contenedor3 h3 {

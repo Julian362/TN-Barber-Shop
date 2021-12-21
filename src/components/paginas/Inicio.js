@@ -5,20 +5,32 @@ import Footer from '../../components/Footer';
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import ModalComentarios from './ModalComentarios';
+import ServiciosItem from '../ServicioItem';
+import '../../css/Agenda.css'
+
 
 
 const Inicio = (props) => {
     const portda2 = {
         backgroundImage: "url(./img/inicio/portada2.jpg)"
     };
-
     const portda3 = {
         backgroundImage: "url(./img/inicio/portada3.jpg)"
     };
-
     const portda4 = {
         backgroundImage: "url(./img/inicio/portada4.jpg)"
     }
+
+    const vServicios = props.Servicios;
+    const Lista_Servicios = vServicios.map(p =>
+        <ServiciosItem
+            id={p.id}
+            nombre={p.nombre}
+            duracion={p.duracion}
+            precio={p.precio}
+            rutaimg={p.rutaimg}
+        />
+    );
 
     return (
         <Fragment>
@@ -26,11 +38,11 @@ const Inicio = (props) => {
                 <img src="/img/inicio/portada1.jpg" alt="" />
             </div>
 
-            <div className="contenedor1">
-                <img src="/img/inicio/chair.svg" alt="" className="" />
+            <div className="contenedor1" id="contenedor1">
+                <img id="correcion" src="/img/inicio/chair.svg" alt="" className="" />
                 <h2>SERVICIOS</h2>
                 <div className="col-12">
-
+                    {Lista_Servicios}
                 </div>
                 <Link className="btn btn-secondary col-2 m-auto" to='/Agenda-tu-cita' id="btnagendarc"><p>Agendar cita</p></Link>
             </div>
@@ -67,9 +79,9 @@ const Inicio = (props) => {
 
             <div className="contenedor3 row" id="">
                 <h3 className="text-center">COMENTARIOS<img src="/img/inicio/comentarios.svg" alt="" className="" id="chair" /></h3>
-                <img src="/img/inicio/mensaje1.svg" alt="" className="col-4" />
-                <img src="/img/inicio/mensaje3.svg" alt="" className="col-4" />
-                <img src="/img/inicio/mensaje2.svg" alt="" className="col-4" />
+                <img src="/img/inicio/mensaje1.png" alt="" className="col-4" />
+                <img src="/img/inicio/mensaje3.png" alt="" className="col-4" />
+                <img src="/img/inicio/mensaje2.png" alt="" className="col-4" />
                 <ModalComentarios id="linkModalMC" />
             </div>
             <div className="portada4" style={portda4}>

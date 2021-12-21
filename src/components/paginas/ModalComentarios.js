@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import '../../css/ModalComentarios.css'
 
 const ModalComentarios = () => {
+    const [listado, setListado] = useState([]);
+    // para ir a bucar lel listado con un hook
+    useEffect(() => {
+        fetch("http://localhost:8081/calificacion/listar",{
+            method:"GET"
+        })
+        .then(res => res.json())
+            .then(res => {
+                setListado(res)
+                console.log(res);
+            })
+    }, [])
+
+
     return (
         <>
             <button type="button" className="btn btn-secondary col-2 m-auto p-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver comentarios</button>
@@ -27,17 +41,25 @@ const ModalComentarios = () => {
                                     <h5 id="titleMC">COMENTARIOS<img src="/img/inicio/comentarios.svg" alt="" className="" id="chair" /></h5>
                                     <div className="row bg-white" id="boxMC">
 
+                                    {listado.map(c =>
+                                    <>
                                         <div className="col-8" id="boxMC1">
-                                            <p id="serviMC">SERVICIO</p>
-                                            <p>dlskfklsd dlskjfklsdj dlsjflksdjflkjsdalf lsdjjlkfjlsd dsfsd  dsfsd dsf </p>
-                                            <p id="userMC">Nombre de Usuario</p>
+                                                <p id="serviMC" key={c.servicio}>{c.servicio}</p>
+                                                <p>{c.comentario}</p>
+                                                <p id="userMC">{c.nickname}</p>
+                                            
                                         </div>
-                                        <div className="col-4" id="boxMC2">
-                                            <p id="calNumMC">4</p>
-                                            <p id="calMC">Calificación</p>
-                                            <p id="dataMC">12-12-12</p>
-                                        </div>
-                                        <hr style={{ width: "80%" }} className="" id="hrMC" />
+                                            <div className="col-4" id="boxMC2">
+                                                <p id="calNumMC">{c.calificacion}</p>
+                                                <p id="calMC">Calificación</p>
+                                                <p id="dataMC">{c.fecha}</p>
+                                            </div>
+                                        
+                                            <hr style={{ width: "85%" }} className="" id="hrMC" />
+                                    </>
+                                    
+                                    )}
+                                    
                                     </div>
                                 </div>
                             </div>

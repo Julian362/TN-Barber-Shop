@@ -73,7 +73,7 @@ function NavBar(props) {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav contenedorIzquierda">
-                            <Link className="col nav-link" id="listasI" to='/Servicios'>Servicios</Link>
+                            <Link className="col nav-link" id="listasI" to='/'>Servicios</Link>
                             <Link className="col nav-link" id="listasI" to='/Contactos'>Contactos</Link>
                         </div>
                         <Link to="/">

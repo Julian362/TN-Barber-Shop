@@ -108,7 +108,9 @@ function App() {
 						</Route>
 						<Route path='/Registro' component={Registro} >
 						</Route>
-						<Route path='/' exact component={Inicio} >
+						<Route path='/' exact component={Inicio} 
+							>
+								<Inicio Servicios={Lista_Servicios}/>
 						</Route>
 						<Route path='/Servicios' component={Servicios} >
 						</Route>
