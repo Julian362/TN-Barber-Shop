@@ -116,7 +116,9 @@ function App() {
 						</Route>
 						<Route path='/Contactos' component={Contactos} >
 						</Route>
-						<Route path='/Editar-usuario' component={EditarUsuario} />
+						<Route path='/Editar-usuario'> 
+						<EditarUsuario paginasCargar={paginasCargar}/> 
+						</Route>
 						<Route path='/Login' >
 							<IniciarSesion setPaginasCargar={setPaginasCargar}/>
 						</Route>

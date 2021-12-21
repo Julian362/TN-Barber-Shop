@@ -1,27 +1,11 @@
 import '../../css/edicion.css'
 import Redes from '../Redes';
 import Footer from '../Footer';
+import { useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 
 var host = "http://localhost:8081";
 
-function TraerDatos() {
-    const nickname = document.getElementById("Nickname-Edicion").value;
-    console.log(nickname);
-    fetch(`${host}/usuario/datospersonales/${nickname}`)
-        .then(res => res.json())
-        .then(res => {
-            console.log(res);
-            document.getElementById("Nombres-Edicion").value = res.nombre;
-            document.getElementById("Apellidos-Edicion").value = res.apellido;
-            document.getElementById("Documento-Edicion").value = res.numero_documento;
-            document.getElementById("tipo-Documento-Edicion").innerHTML = res.tipo_documento;
-            document.getElementById("Nickname-Edicion").value = res.nickname;
-            document.getElementById("Correo-Edicion").value = res.correo;
-            document.getElementById("Contraseñas-Edicion").value = res.password;
-            console.log(res.tipo_documento);
-        })
-}
 function EditarDatos(){
     const nombre =  document.getElementById("Nombres-Edicion").value;
     const apellido = document.getElementById("Apellidos-Edicion").value;
@@ -37,7 +21,25 @@ function EditarDatos(){
 }
 
 
-function EditarUsuario() {
+function EditarUsuario(props) {
+
+    useEffect(function () {
+        const nickname = props.paginasCargar.nickname
+        console.log(nickname);
+        fetch(`${host}/usuario/datospersonales/${nickname}`)
+            .then(res => res.json())
+            .then(res => {
+                console.log(res);
+                document.getElementById("Nombres-Edicion").value = res.nombre;
+                document.getElementById("Apellidos-Edicion").value = res.apellido;
+                document.getElementById("Documento-Edicion").value = res.numero_documento;
+                document.getElementById("tipo-Documento-Edicion").innerHTML = res.tipo_documento;
+                document.getElementById("Nickname-Edicion").value = res.nickname;
+                document.getElementById("Correo-Edicion").value = res.correo;
+                document.getElementById("Contraseñas-Edicion").value = res.password;
+                console.log(res.tipo_documento);
+            })
+    },[])
 
     return (
         <div>
@@ -70,7 +72,7 @@ function EditarUsuario() {
                     <input type="password" className="form-control input-Edicion" id="Confirmar-Edicion" placeholder="Confirmar contraseña" />
 
                 </form>
-                <button className="btn btn-primary btn-Edicion mr-3" onClick={TraerDatos}> Mis datos </button>
+                {/* <button className="btn btn-primary btn-Edicion mr-3" onClick={TraerDatos}> Mis datos </button> */}
                 <button className="btn btn-primary btn-Edicion " onClick={EditarDatos}> Editar </button>
 
                 <div className="Redes-Edicion">
