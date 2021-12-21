@@ -26,6 +26,7 @@ function NavBar(props) {
             <ul className="dropdown-menu">
                 <Link className="dropdown-item" to='/Editar-usuario'>Editar usuario</Link>
                 <Link className="dropdown-item" to='/Historial-citas'>Historial citas</Link>
+                <Link className="dropdown-item" to='/'>Cerrar sesión</Link>
             </ul>
         </>
     );
@@ -40,6 +41,7 @@ function NavBar(props) {
                 <Link className="dropdown-item" to='/Reportes'>Supervisor Reportes</Link>
                 <Link className="dropdown-item" to='/AdministradorServicios'>Administrador Servicios</Link>
                 <Link className="dropdown-item" to='/GestionPersonalSuper'>Gestion personal-Super</Link>
+                <Link className="dropdown-item" to='/'>Cerrar sesión</Link>
             </ul>
         </>
     );

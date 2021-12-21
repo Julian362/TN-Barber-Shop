@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import '../css/Login.css'
 import Redes from '../components/Redes'
 import Footer from '../components/Footer';
@@ -45,7 +46,6 @@ function Login(props) {
             <Footer />
 
         </div>
-
     );
 }
 export default Login;
