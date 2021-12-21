@@ -97,8 +97,8 @@ function App() {
 						</Route>
 						<Route path='/Historial-citas'>
 							<HistorialCitas
-								historial={lista_Historial} 
-								paginasCargar={paginasCargar} setPaginasCargar={setPaginasCargar}/>
+								historial={lista_Historial}
+								paginasCargar={paginasCargar} setPaginasCargar={setPaginasCargar} />
 						</Route>
 						<Route path='/Gestion-personal-administrador'>
 							<GestionPersonalAdmin empleados={Lista_Trabajadores} />
@@ -108,9 +108,9 @@ function App() {
 						</Route>
 						<Route path='/Registro' component={Registro} >
 						</Route>
-						<Route path='/' exact component={Inicio} 
-							>
-								<Inicio Servicios={Lista_Servicios}/>
+						<Route path='/' exact component={Inicio}
+						>
+							<Inicio Servicios={Lista_Servicios} />
 						</Route>
 						<Route path='/Servicios' component={Servicios} >
 						</Route>
@@ -118,7 +118,7 @@ function App() {
 						</Route>
 						<Route path='/Editar-usuario' component={EditarUsuario} />
 						<Route path='/Login' >
-							<IniciarSesion setPaginasCargar={setPaginasCargar}/>
+							<IniciarSesion setPaginasCargar={setPaginasCargar} />
 						</Route>
 						<Route path='/AdministradorServicios' >
 							<AdministradorServicios
