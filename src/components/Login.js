@@ -37,7 +37,7 @@ function Login(props) {
                     <input type="password" className="form-control" id="Contraseña" placeholder="Contraseña" />
                 </form>
                 <Link to=""><p id="Olvidar">¿Olvidaste tu contraseña?</p></Link>
-                <button className="btn btn-primary btn-Ingresar " onClick={ensayo}>Ingresar</button>
+                <Link className="btn btn-primary btn-Ingresar" to='/' onClick={ensayo}>Ingresar</Link>
                 <Link className="Registro" to='/Registro' id="Registrate"><p>Registrarse</p></Link>
                 <div className="Redes-Login">
                     <Redes />

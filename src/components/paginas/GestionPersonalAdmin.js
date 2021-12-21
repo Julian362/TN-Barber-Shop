@@ -133,7 +133,7 @@ const GestionPersonalAdmin = () => {
                    
                     <div style={{ width: "50%" }}>
                         <input type="radio" className="btn-check" name="btnradio" onClick={RegistrosTotales} id="btnradio2" autoComplete="off" defaultChecked />
-                        <label className="btn btn-outline-secondary" htmlFor="btnradio2" style={{ width: "100%" , height:"90%", fontSize:"22px", paddingTop:"2px"}} > todos los registros </label>
+                        <label className="btn btn-outline-secondary" htmlFor="btnradio2" style={{ width: "100%" , height:"90%", fontSize:"22px", paddingTop:"2px"}} > Todos los registros </label>
                     </div>
 
 
