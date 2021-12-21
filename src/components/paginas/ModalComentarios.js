@@ -32,7 +32,6 @@ const ModalComentarios = () => {
                                             <p>dlskfklsd dlskjfklsdj dlsjflksdjflkjsdalf lsdjjlkfjlsd dsfsd  dsfsd dsf </p>
                                             <p id="userMC">Nombre de Usuario</p>
                                         </div>
-
                                         <div className="col-4" id="boxMC2">
                                             <p id="calNumMC">4</p>
                                             <p id="calMC">Calificación</p>
