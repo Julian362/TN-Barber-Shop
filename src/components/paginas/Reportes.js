@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from '../Footer';
 import Redes from '../Redes'
 import '../../css/Reportes.css';
+import { Fragment } from 'react';
+
 
 
 const HistorialCitas = (props) => {
@@ -65,12 +67,8 @@ const HistorialCitas = (props) => {
                             <div className="usuarios-atendidos-date">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="desde-date" onChange="Desde()">Desde:</h5>
-                                        <input type="date" className="form-control border-form" id="desde-date"  />
-                                    </div>
-                                    <div className="input-group input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="hasta-date">Hasta:</h5>
-                                        <input type="date" className="form-control border-form" id="hasta-date"  />
+                                        <h5 className="h5-center" htmlFor="desde-date" onChange="Desde()">Día:</h5>
+                                        <input type="date" className="form-control border-form" id="desde-date-atenidos"  />
                                     </div>
                                 </div>
                             </div>
@@ -100,12 +98,8 @@ const HistorialCitas = (props) => {
                             <div className="ingresos-date">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="desde-date">Desde:</h5>
+                                        <h5 className="h5-center" htmlFor="desde-date">Día :</h5>
                                         <input type="date" className="form-control border-form" id="desde-date"  />
-                                    </div>
-                                    <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="hasta-date">Hasta:</h5>
-                                        <input type="date" className="form-control border-form" id="hasta-date"  />
                                     </div>
                                     <div className="input-group  input-group-fit-content">
                                         <h5 className="h5-center" htmlFor="reportes-servicios">Servicios :</h5>
@@ -143,7 +137,7 @@ const HistorialCitas = (props) => {
                             <div className="ingresos-disponible">
                                 <div className="input-group input-group-container">
                                     <div className="input-group  input-group-fit-content">
-                                        <h5 className="h5-center" htmlFor="desde-date">Desde:</h5>
+                                        <h5 className="h5-center" htmlFor="desde-date">Día:</h5>
                                         <input type="date" className="form-control border-form" id="desde-date"  />
                                     </div>
                                     <div className="input-group  input-group-fit-content">

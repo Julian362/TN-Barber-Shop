@@ -22,10 +22,23 @@ const HistorialCitas = (props) => {
         }
         solicitarAgenda();
     },[])
+
+    const eliminarAgenda = (p) => {
+        const _id=p._id;
+        const eliminarProgramados = () => {
+            fetch(`${host}/eliminar/agenda/${_id}`)
+                .then(res => res.json())
+                .then(res => {
+                    document.getElementById(p._id).innerHTML=""
+                })
+        }
+        eliminarProgramados();
+    } //by Majito copiado de Julian :P
+
     
     const agendados = listaAgendados.map((p) =>
         <>
-            <tr>
+            <tr  id={p._id}>
                 <td>{p.servicio}</td>
                 <td>{p.fecha}</td>
                 <td>{p.duracion}</td>
@@ -33,7 +46,7 @@ const HistorialCitas = (props) => {
                 <td>
                     <div id="btn-contenedor">
                         <button type="button" id="btn-eliminar" className="btn btn-primary mt-1 mb-1 w-75 programada">Programado</button>
-                        <button type="button" id="btn-eliminar" className="btn btn-danger mt-1 mb-1 w-75 eliminar">Cancelar</button>
+                        <button type="button" id="btn-eliminar" className="btn btn-danger mt-1 mb-1 w-75 eliminar" onClick={() => eliminarAgenda(p)}>Cancelar</button>
                     </div>
                 </td>
             </tr>
